@@ -1,5 +1,15 @@
+import Navbar from "./components/Navbar";
+import Service from "./components/Service";
+import ServicesList from "./components/ServicesList";
+
 function App() {
-  return <div>Skillshop</div>;
+  return (
+    <>
+      <Navbar />
+      <ServicesList />
+      <Service />
+    </>
+  );
 }
 
 export default App;
