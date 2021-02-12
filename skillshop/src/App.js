@@ -1,7 +1,6 @@
 // import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Service from "./components/Service";
 import ServicesList from "./components/ServicesList";
 
 function App() {
@@ -21,12 +20,7 @@ function App() {
   // };
   return (
     <Router>
-      <Navbar>
-        <Link to="/">Home</Link>
-        <Link to="/uslugi">About</Link>
-        <Link to="/users">Users</Link>
-      </Navbar>
-
+      
       <Switch>
         <Route path="/uslugi">
           <ServicesList />
@@ -34,10 +28,21 @@ function App() {
         <Route path="/users">{/* <Users /> */}</Route>
         <Route path="/">{/* <Home /> */}</Route>
       </Switch>
+
       <div>
-        {/* <ServicesList>
-          <Service />
-        </ServicesList> */}
+          {/* <Link to="/">Home</Link>
+          <Link to="/uslugi">About</Link>
+          <Link to="/users">Users</Link> */}
+
+        <Navbar>
+
+        </Navbar>
+        
+        <ServicesList>
+          
+        </ServicesList>
+
+  
         {/* <p>{counter}</p> */}
         {/* <button onClick={KlikButton}>Kliknij mnie</button> */}
       </div>
