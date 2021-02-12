@@ -1,6 +1,8 @@
+import "./../styles/Navbar.css";
+
 const Navbar = () => {
   return (
-    <div>
+    <div class="dummyClass">
       <p>To jest Navbar</p>
     </div>
   );
