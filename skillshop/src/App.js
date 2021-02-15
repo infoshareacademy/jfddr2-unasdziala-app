@@ -1,19 +1,33 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import { useState, useEffect } from 'react';
+
 import Navbar from "./components/Navbar.js";
 import Main from "./components/Main.js";
 import Footer from "./components/Footer.js";
 
-import ServicesList from "./components/ServicesList";
-
 
 function App() {
+
+  const [ service, setService ] = useState([]);
+  const [ serviceList, setServiceList ] = useState([]);
+
+  useEffect(
+    () => {
+      fetch('http://localhost:3001/services').then((res) => res.json()).then((serviceList) => {
+        setServiceList(serviceList);
+      });
+    },[ service ]
+  );
+
+  console.log(serviceList);
+
   return (
     <Router>
       
       <Switch>
         <Route path="/uslugi">
-          <ServicesList />
+          {/* <ServicesList /> */}
         </Route>
         <Route path="/users">{/* <Users /> */}</Route>
         <Route path="/">{/* <Home /> */}</Route>
@@ -27,9 +41,6 @@ function App() {
         <Navbar></Navbar>
         <Main />
         <Footer />
-
-        {/* <ServicesList>
-        </ServicesList> */}
         
       </div>
     </Router>

@@ -1,12 +1,10 @@
 import Service from "./Service.js";
 
-const ServicesList = () => {
+const ServicesList = ({serviceList}) => {
   return (
-    <>
-      
-      <p>Przykladowy tekst ServicesList</p>
+    <div>
       <Service />
-    </>
+    </div>
   );
 };
 

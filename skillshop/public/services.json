@@ -1,19 +1,21 @@
-[
-  {
-    "id": 1,
-    "name": "usługi elektryczne",
-    "category": "elektryczne"
-  },
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "usługi elektryczne",
+      "category": "elektryczne"
+    },
 
-  {
-    "id": 2,
-    "name": "usługi hydrauliczne",
-    "category": "hydrauliczne"
-  },
+    {
+      "id": 2,
+      "name": "usługi hydrauliczne",
+      "category": "hydrauliczne"
+    },
 
-  {
-    "id": 3,
-    "name": "usługi budowlane",
-    "category": "budowlane"
-  }
-]
+    {
+      "id": 3,
+      "name": "usługi budowlane",
+      "category": "budowlane"
+    }
+  ]
+}
