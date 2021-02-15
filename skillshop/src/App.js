@@ -1,23 +1,13 @@
-// import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Navbar from "./components/Navbar";
+
+import Navbar from "./components/Navbar.js";
+import Main from "./components/Main.js";
+import Footer from "./components/Footer.js";
+
 import ServicesList from "./components/ServicesList";
 
-function App() {
-  // const [counter, setCounter] = useState(1);
 
-  fetch("./services.json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
-  // const KlikButton = () => {
-  //   let AktualnyStan = counter;
-  //   AktualnyStan++;
-  //   setCounter(AktualnyStan);
-  // };
+function App() {
   return (
     <Router>
       
@@ -34,17 +24,13 @@ function App() {
           <Link to="/uslugi">About</Link>
           <Link to="/users">Users</Link> */}
 
-        <Navbar>
+        <Navbar></Navbar>
+        <Main />
+        <Footer />
 
-        </Navbar>
+        {/* <ServicesList>
+        </ServicesList> */}
         
-        <ServicesList>
-          
-        </ServicesList>
-
-  
-        {/* <p>{counter}</p> */}
-        {/* <button onClick={KlikButton}>Kliknij mnie</button> */}
       </div>
     </Router>
   );

@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  width: 99vw;
+  height: 80vh;
+  border: solid 2px black;
+}
+
+.main-left,
+.main-right {
+  display: flex;
+  width: 20vw;
+  height: 80vh;
+  border: solid 2px peru;
+}
+
+.main-center {
+  width: 60vw;
+  height: 80vh;
+  border: solid 2px blue;
+}
+
+.main-right {
+  border: solid 2px red;
+}

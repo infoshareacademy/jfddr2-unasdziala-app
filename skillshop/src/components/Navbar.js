@@ -1,10 +1,11 @@
 import "./../styles/Navbar.css";
 
-const Navbar = ({children}) => {
+const Navbar = () => {
   return (
-    <div class="dummyClass">
-      <p>To jest Navbar</p>
-      {children}
+    <div class="navbar">
+      <div class="nav-logo"></div>
+      <input class="nav-input" type="text"></input>
+      <button class="nav-button">DODAJ USŁUGĘ</button>
     </div>
   );
 };

@@ -1,4 +1,25 @@
-.container {
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 99vw;
+  height: 10vh;
+  border: solid 2px black;
+}
+
+.nav-input {
+  width: 33vw;
+  height: 2.5vh;
+}
+
+.nav-logo {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  border: solid 2px black;
+  margin-left: 2.5%;
+}
+
+.nav-button {
+  margin-right: 2.5%;
 }
