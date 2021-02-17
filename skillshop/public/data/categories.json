@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "category": "Usługi elektryczne"
+    },
+    {
+      "id": 2,
+      "category": "Usługi budowlane"
+    },
+    {
+      "id": 3,
+      "category": "Usługi hydrauliczne"
+    },
+    {
+      "id": 4,
+      "category": "Usługi wykończeniowe"
+    },
+    {
+      "id": 5,
+      "category": "Usługi stolarskie"
+    },
+    {
+      "id": 6,
+      "category": "Usługi architektoniczne"
+    },
+    {
+      "id": 7,
+      "category": "Usługi sprzątające"
+    },
+    {
+      "id": 8,
+      "category": "Usługi malarskie"
+    },
+    {
+      "id": 9,
+      "category": "Usługi transportowe"
+    },
+    {
+      "id": 10,
+      "category": "Usługi informatyczne"
+    }
+  ]
+}

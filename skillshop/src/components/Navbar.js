@@ -1,15 +1,15 @@
 import "./../styles/Navbar.css";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {SearchBar} from "./SearchBar"
 
 const Navbar = () => {
   return (
     <div class="navbar">
       <div class="nav-logo"></div>
+      {/* <SearchBar /> */}
       <input class="nav-input" type="text"></input>
-      <Router>
-        <Link to='/addTask'><button class="nav-button">DODAJ USŁUGĘ</button></Link>
-        <Link to='/'><button class="nav-button">Powrót do ekranu głównego (tymczasowy)</button></Link>
-      </Router>
+      <Link to='/addTask'><button class="nav-button">DODAJ USŁUGĘ</button></Link>
+      <Link to='/'><button class="nav-button">Powrót do ekranu głównego (tymczasowy)</button></Link>
     </div>
   );
 };

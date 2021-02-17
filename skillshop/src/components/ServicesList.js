@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+
 import Service from "./Service.js";
+import { useState, useEffect } from 'react';
 
 const ServicesList = () => {
 
@@ -8,20 +9,19 @@ const ServicesList = () => {
 
   useEffect(
     () => {
-      fetch('http://localhost:3001/services').then((res) => res.json()).then((serviceList) => {
+      fetch("./data/services.json").then(res => res.json()).then((serviceList) => {
         setServiceList(serviceList);
       });
     },[ service ]
   );
 
-  console.log(serviceList);
-
+  console.log(serviceList)
 
   return (
     <div>
-      {serviceList.map((service) => {
+      {/* {serviceList.map((service) => {
         return (<Service key={service.id} service={service}/>)
-      })}
+      })} */}
     </div>
   );
 };
