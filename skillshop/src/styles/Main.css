@@ -11,12 +11,14 @@
   width: 20vw;
   height: 80vh;
   border: solid 2px peru;
+  background-color: #146eb4;
 }
 
 .main-center {
   width: 60vw;
   height: 80vh;
   border: solid 2px blue;
+  background-color: #f2f2f2;
 }
 
 .main-right {

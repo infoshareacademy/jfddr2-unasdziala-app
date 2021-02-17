@@ -4,15 +4,17 @@
   align-items: center;
   width: 99vw;
   height: 10vh;
-  border: solid 2px black;
+  background-color: #232f3e;
 }
 
 .nav-input {
   width: 33vw;
   height: 2.5vh;
+  background-color: white;
 }
 
 .nav-logo {
+  background-image: url("../img/logo.png");
   width: 10vh;
   height: 10vh;
   border-radius: 50%;
