@@ -2,20 +2,47 @@
   "services": [
     {
       "id": 1,
-      "name": "usługi elektryczne",
-      "category": "elektryczne"
+      "category": "Usługi elektryczne",
+      "fullName": "Jan Nowak",
+      "email": "elektryk@abc.pl",
+      "phoneNumber": "123456789",
+      "city": "Warszawa",
+      "address": "Rejterów 125/15, 12-345, Praga Północ",
+      "description": "Oferuję montaż instalacji elektrycznych, za rozsądną cenę",
+      "price": "120pln/h"
     },
-
     {
       "id": 2,
-      "name": "usługi hydrauliczne",
-      "category": "hydrauliczne"
+      "category": "Usługi budowlane",
+      "fullName": "Jan Nowak",
+      "email": "elektryk@abc.pl",
+      "phoneNumber": "123456789",
+      "city": "Warszawa",
+      "address": "Rejterów 125/15, 12-345, Praga Północ",
+      "description": "Oferuję montaż instalacji elektrycznych, za rozsądną cenę",
+      "price": "120pln/h"
     },
-
     {
       "id": 3,
-      "name": "usługi budowlane",
-      "category": "budowlane"
+      "category": "Usługi hydrauliczne",
+      "fullName": "Jan Nowak",
+      "email": "elektryk@abc.pl",
+      "phoneNumber": "123456789",
+      "city": "Warszawa",
+      "address": "Rejterów 125/15, 12-345, Praga Północ",
+      "description": "Oferuję montaż instalacji elektrycznych, za rozsądną cenę",
+      "price": "120pln/h"
+    },
+    {
+      "id": 4,
+      "category": "Usługi wykończeniowe",
+      "fullName": "Jan Nowak",
+      "email": "elektryk@abc.pl",
+      "phoneNumber": "123456789",
+      "city": "Warszawa",
+      "address": "Rejterów 125/15, 12-345, Praga Północ",
+      "description": "Oferuję montaż instalacji elektrycznych, za rozsądną cenę",
+      "price": "120pln/h"
     }
   ]
 }

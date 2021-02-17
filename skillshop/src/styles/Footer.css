@@ -2,10 +2,10 @@
   display: flex;
 
   width: 99vw;
-  height: 10vh;
+  height: 5vh;
   justify-content: center;
   align-items: center;
-  border: solid 2px black;
-  background-color: #232f3e;
+  background-color: #131a22;
   color: white;
+  font-family: "Oswald", sans-serif;
 }

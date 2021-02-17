@@ -2,7 +2,9 @@
   display: flex;
   width: 99vw;
   height: 80vh;
-  border: solid 2px black;
+  /*background-color: ##8e949b;*/
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
 }
 
 .main-left,
@@ -10,17 +12,15 @@
   display: flex;
   width: 20vw;
   height: 80vh;
-  border: solid 2px peru;
-  background-color: #146eb4;
+  color: white;
+  background-color: #24303e;
 }
 
 .main-center {
   width: 60vw;
   height: 80vh;
-  border: solid 2px blue;
   background-color: #f2f2f2;
 }
 
 .main-right {
-  border: solid 2px red;
 }
