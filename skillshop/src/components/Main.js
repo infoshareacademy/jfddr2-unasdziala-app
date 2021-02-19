@@ -11,8 +11,7 @@ const Main = () => {
       <div class="main-center">
         <Switch>
           <Route path='/addTask'>
-            {/* <AddService /> */}
-            <div>abc</div>
+            <AddService />
           </Route>
           <Route path="/">
             <ServicesList />
