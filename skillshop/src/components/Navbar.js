@@ -11,11 +11,11 @@ const Navbar = () => {
       <Link to="/addTask">
         <button class="nav-button">DODAJ USŁUGĘ</button>
       </Link>
-      <Link to="/">
+      {/* <Link to="/">
         <button class="nav-button">
           Powrót do ekranu głównego (tymczasowy)
         </button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -1,16 +1,15 @@
 import Service from "./Service.js";
-import { useState, useEffect } from "react";
 
-const ServicesList = () => {
-  const [serviceList, setServiceList] = useState([]);
+const ServicesList = ({serviceList}) => {
+  // const [serviceList, setServiceList] = useState([]);
 
-  useEffect(() => {
-    fetch("./data/services.json")
-      .then(res => res.json())
-      .then(data => {
-        setServiceList(data.services);
-      });
-  }, []);
+// useEffect(() => {
+//   fetch("./data/services.json")
+//     .then(res => res.json())
+//     .then(data => {
+//       setServiceList(data.services);
+//     });
+// }, []);
 
   return (
     <div>

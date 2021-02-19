@@ -3,6 +3,7 @@ import "./../styles/Service.css";
 const Service = ({service}) => {
   return (
     <div className="service">
+      <div><b>Tytuł: </b>{service.title}</div>
       <div><b>Kategoria usług: </b>{service.category}</div>
       <div><b>Imię specjalisty: </b>{service.fullName}</div>
       <div><b>Adres email: </b>{service.email}</div>

@@ -3,7 +3,7 @@ import {Switch, Route} from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 
-const Main = () => {
+const Main = ({serviceList}) => {
 
   return (
     <div class="main">
@@ -14,7 +14,7 @@ const Main = () => {
             <AddService />
           </Route>
           <Route path="/">
-            <ServicesList />
+            <ServicesList serviceList={serviceList} />
           </Route>
         </Switch>
       </div>

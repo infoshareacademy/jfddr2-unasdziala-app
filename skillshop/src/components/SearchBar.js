@@ -1,22 +1,22 @@
 import { React, useState, useEffect } from "react";
 
-export default function SearchBar() {
-  const [services, setServices] = useState([]);
+export default function SearchBar({services}) {
+  // const [services, setServices] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredServices, setFilteredServices] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch("./data/services.json")
-      .then(res => {
-        setServices(res.data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   fetch("./data/services.json")
+  //     .then(res => {
+  //       setServices(res.data);
+  //       setLoading(false);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
   useEffect(() => {
     setFilteredServices(
