@@ -1,3 +1,5 @@
+import "./../styles/MainContainer.css"
+
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -29,7 +31,7 @@ const MainContainer = () => {
   }, [dummyVariable]);
 
   return (
-    <div>
+    <div class="main-container">
       <Router>
         <Navbar services={serviceList}/>
         <Main serviceList={serviceList} setDummyVariable={setDummyVariable}/>
