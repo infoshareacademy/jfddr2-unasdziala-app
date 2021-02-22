@@ -1,27 +1,22 @@
-
 import Service from "./Service.js";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const ServicesList = () => {
+const ServicesList = ({ serviceList }) => {
+  // const [serviceList, setServiceList] = useState([]);
 
-  const [ service, setService ] = useState([]);
-  const [ serviceList, setServiceList ] = useState([]);
-
-  useEffect(
-    () => {
-      fetch("./data/services.json").then(res => res.json()).then((serviceList) => {
-        setServiceList(serviceList);
-      });
-    },[ service ]
-  );
-
-  console.log(serviceList)
+  // useEffect(() => {
+  //   fetch("./data/services.json")
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setServiceList(data.services);
+  //     });
+  // }, []);
 
   return (
     <div>
-      {/* {serviceList.map((service) => {
-        return (<Service key={service.id} service={service}/>)
-      })} */}
+      {serviceList.map((service) => {
+        return <Service key={service.id} service={service} />;
+      })}
     </div>
   );
 };
