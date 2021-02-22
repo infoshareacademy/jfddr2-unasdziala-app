@@ -1,8 +1,9 @@
 import "./../styles/AddService.css"
-
+import firebase from "./../firebase/config.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-const AddService = () => {
+
+const AddService = ({setDummyVariable, serviceList}) => {
   const [categoriesList, setCategoriesList] = useState([]);
 
   useEffect(() => {
@@ -13,85 +14,86 @@ const AddService = () => {
       });
   }, []);
 
-  const [state, setState] = useState("Usługi budowlane");
+  const [category, setCategory] = useState("Usługi budowlane");
 
-  const getData = () => {
-    
-    const service = {
-      id: 3,
-      title: "Hydraulik szuka pracy",
-      category: "Usługi hydrauliczne",
-      fullName: "Jan Nowak",
-      email: "elektryk@abc.pl",
-      phoneNumber: "123456789",
-      city: "Warszawa",
-      address: "Rejterów 125/15, 12-345, Praga Północ",
-      description: "Oferuję montaż instalacji elektrycznych, za rozsądną cenę",
-      price: "120pln/h"
-    }
+  const [form, setForm] = useState({
+    id: serviceList.length,
+    title: "",
+    category: "",
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    city: "",
+    address: "",
+    description: "",
+    price: ""
+  });
 
-    return service
+  const updateField = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+      /*UWAGA! category nie zadziała jeśli dodatkowo jakieś inne pole nie zostanie zmienione. 
+      Zastanowić się nad walidacją */
+      "category": category
+    })
   }
 
   const addServiceToDB = () => {
-
-    const service = getData()
-
-    return fetch('./data/services.json', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(service)
-		});
+    firebase
+      .firestore()
+      .collection("services")
+      .add(form)
+      setDummyVariable(serviceList.length)
   };
 
   return (
     <div className="add-service">
-      <form onSubmit={console.log("sumbit")}>
+      <form>
         <label>
           Wybierz typ usługi:&nbsp;&nbsp;
-          <select value={state} onChange={e => setState(e.target.value)}>
+          <select value={category} onChange={e => setCategory(e.target.value)}>
             {categoriesList.map(category => {
               return (
-                <option value={category.category}>{category.category}</option>
+                <option key={category.id} value={category.category}>{category.category}</option>
               );
             })}
           </select>
         </label>
         
-        <input type="submit" value="Wyślij" />
+        {/* <input type="submit" value="Wyślij" /> */}
         <div className="service-container-input">
         <label>
-          
           Tytuł usługi:&nbsp;&nbsp;
-          <input type="text" />
+          <input type="text" id="title" name="title" onChange={updateField}/>
         </label>
         <label>
           Imię i nazwisko:&nbsp;&nbsp;
-          <input type="text" id="name" />
+          <input type="text" id="fullName" name="fullName" onChange={updateField}/>
         </label>
         <label >
           Adres email:&nbsp;&nbsp;
-          <input type="email" id="email" />
+          <input type="email" id="email" name="email" onChange={updateField}/>
         </label>
         <label>
           Numer telefonu:&nbsp;&nbsp;
-          <input type="tel" id="phonenumber" />
+          <input type="tel" id="phoneNumber" name="phoneNumber" onChange={updateField}/>
         </label>
         <label>
           Adres:&nbsp;&nbsp;
-          <input type="text" id="adress" />
+          <input type="text" id="address" name="address" onChange={updateField}/>
         </label>
         <label>
           Miasto:&nbsp;&nbsp;
-          <input type="text" id="city"/>
+          <input type="text" id="city" name="city" onChange={updateField}/>
         </label>
         <label>
           Opis usługi:&nbsp;&nbsp;
-          <input type="text" id="service-description" />
+          <input type="text" id="description" name="description" onChange={updateField}/>
         </label>
         <label>
           Cena:&nbsp;&nbsp;
-          <input type="text" id="price-service" />
+          <input type="text" id="price" name="price" onChange={updateField}/>
         </label>
         </div>
       </form>
