@@ -1,8 +1,7 @@
 import MainContainer from "./components/MainContainer";
-import SearchBar from "./components/SearchBar";
 
 function App() {
-  return (<MainContainer />), (<SearchBar />);
+  return <MainContainer />;
 }
 
 export default App;

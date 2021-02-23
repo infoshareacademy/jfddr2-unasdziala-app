@@ -2,6 +2,7 @@
   "services": [
     {
       "id": 1,
+      "title": "Elektryk szuka pracy",
       "category": "Usługi elektryczne",
       "fullName": "Jan Nowak",
       "email": "elektryk@abc.pl",
@@ -13,6 +14,7 @@
     },
     {
       "id": 2,
+      "title": "Budowlaniec szuka pracy",
       "category": "Usługi budowlane",
       "fullName": "Jan Nowak",
       "email": "elektryk@abc.pl",
@@ -24,6 +26,7 @@
     },
     {
       "id": 3,
+      "title": "Hydraulik szuka pracy",
       "category": "Usługi hydrauliczne",
       "fullName": "Jan Nowak",
       "email": "elektryk@abc.pl",
@@ -32,118 +35,6 @@
       "address": "Rejterów 125/15, 12-345, Praga Północ",
       "description": "Oferuję montaż instalacji elektrycznych, za rozsądną cenę",
       "price": "120pln/h"
-    },
-    {
-      "id": 4,
-      "category": "Usługi wykończeniowe",
-      "fullName": "Jan Nowak",
-      "email": "elektryk@abc.pl",
-      "phoneNumber": "123456789",
-      "city": "Warszawa",
-      "address": "Rejterów 125/15, 12-345, Praga Północ",
-      "description": "Oferuję montaż instalacji elektrycznych, za rozsądną cenę",
-      "price": "120pln/h"
-    },
-    {
-      "id": 5,
-      "category": "Usługi hydrauliczne",
-      "fullName": "Mateusz Abramczyk",
-      "email": "abramczyk@abc.pl",
-      "phoneNumber": "788354261",
-      "city": "Poznań",
-      "address": "Chmielna 89/11, 10-212, Wola",
-      "description": "Oferuje usługi związane z pracami wodno – kanalizacyjnymi",
-      "price": "80pln/h"
-    },
-    {
-      "id": 6,
-      "category": "Usługi stolarskie",
-      "fullName": "Andrzej Krawczyk",
-      "email": "biuro@drewpol.pl",
-      "phoneNumber": "123456789",
-      "city": "Gdynia",
-      "address": "Morska 126, 81-221, Gdynia",
-      "description": "Usługi stolarskie, meble na wymiar, renowacja mebli",
-      "price": "120pln/h"
-    },
-    {
-      "id": 7,
-      "category": "Usługi wykończeniowe",
-      "fullName": "Jan Chlebek",
-      "email": "janchlebek@abc.pl",
-      "phoneNumber": "733354261",
-      "city": "Wrocław",
-      "address": "Giełdowa 4D, 01-212, Praga-Północ",
-      "description": "Wykończenie wnętrz - fachowo, solidnie, terminowo, z gwarancją",
-      "price": "95pln/h"
-    },
-
-    {
-      "id": 8,
-      "category": "Usługi architektoniczne",
-      "fullName": "J.K Architekci",
-      "email": "biuro@jkarchitekci.pl",
-      "phoneNumber": "501 102 261",
-      "city": "Poznań",
-      "address": "Kramarska 15/7, 61-765 Poznań",
-      "description": "Projektowanie domów, projektowanie wnętrz",
-      "price": "120pln - 300pln/m2"
-    },
-    {
-      "id": 9,
-      "category": "Usługi sprzątające",
-      "fullName": "Anna Kowalska",
-      "email": "kowalska@abc.pl",
-      "phoneNumber": "783954261",
-      "city": "Warszawa",
-      "address": "Chmielna 7A, 02-342, Wawer",
-      "description": "Oferuje profesjonalne sprzątanie mieszkań i domów w ustalonym przez Państwa zakresie",
-      "price": "25pln/h"
-    },
-    {
-      "id": 10,
-      "category": "Usługi malarskie",
-      "fullName": "Sławomir Klajny",
-      "email": "klajny@abc.pl",
-      "phoneNumber": "743954661",
-      "city": "Otwock",
-      "address": "Warszawska 56, 01-502, Wawer",
-      "description": "Świadcze usługi malarsko-remontowe na terenie Otwocku i okolic.",
-      "price": "60pln/h"
-    },
-    {
-      "id": 11,
-      "category": "Usługi transportowe",
-      "fullName": "Trans-express",
-      "email": "biuro@trans-express.pl",
-      "phoneNumber": "783954261",
-      "city": "Kraków",
-      "address": "Erazma Jerzmanowskiego 34/90, 30-836 Kraków",
-      "description": "Usługi transportowe, transport mebli, przeprowadzki międzynarodowe, przeprowadzki biur, firm i mieszkań",
-      "price": "Transport na terenie Krakowa: od 70pln/h pierwsza rozpoczęta godzina, wyjazd poza miasto: od 2pln/km, pomoc przy przenoszeniu ładunku: 30pln/h kazda osoba"
-    },
-    {
-      "id": 12,
-      "category": "Usługi transportowe",
-      "fullName": "Trans-express",
-      "email": "biuro@trans-express.pl",
-      "phoneNumber": "783954261",
-      "city": "Kraków",
-      "address": "Erazma Jerzmanowskiego 34/90, 30-836 Kraków",
-      "description": "Usługi transportowe, transport mebli, przeprowadzki międzynarodowe, przeprowadzki biur, firm i mieszkań",
-      "price": "Transport na terenie Krakowa: od 70pln/h pierwsza rozpoczęta godzina, wyjazd poza miasto: od 2pln/km, pomoc przy przenoszeniu ładunku: 30pln/h ka"
-    },
-
-    {
-      "id": 13,
-      "category": "Usługi informatyczne",
-      "fullName": "ITProjekt",
-      "email": "biuro@itprojekt.co",
-      "phoneNumber": "884000391",
-      "city": "Bydgoszcz",
-      "address": "Inowrocławska 38/13, 85-153 Bydgoszcz",
-      "description": "Archiwizacja danych, instalacja systemów operacyjnych, outsourcing informatyczny, serwery sieciowe, serwis sprzętu komputerowego",
-      "price": "od 25pln do 10000pln"
     }
   ]
 }

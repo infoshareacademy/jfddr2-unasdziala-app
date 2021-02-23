@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 
-const Main = ({ serviceList }) => {
+const Main = ({ setDummyVariable, serviceList }) => {
   return (
     <div class="main">
       <div class="main-left">
@@ -12,7 +12,10 @@ const Main = ({ serviceList }) => {
       <div class="main-center">
         <Switch>
           <Route path="/addTask">
-            <AddService />
+            <AddService
+              setDummyVariable={setDummyVariable}
+              serviceList={serviceList}
+            />
           </Route>
           <Route path="/">
             <ServicesList serviceList={serviceList} />
