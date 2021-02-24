@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div class="navbar">
-      <div class="nav-logo"></div>
+      <Link  to="/"><div class="nav-logo">SkillShop</div></Link>
       {/* <SearchBar /> */}
       <input class="nav-input" type="text"></input>
       <Link to="/addTask">
