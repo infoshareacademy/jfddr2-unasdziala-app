@@ -8,7 +8,7 @@ import LandingPage from "./LandingPage";
 
 const Main = ({setDummyVariable, serviceList}) => {
 
-  const [filteredServices, setFilteredServices] = useState([]);
+  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState([]);
 
   return (
     <div class="main">
@@ -16,23 +16,23 @@ const Main = ({setDummyVariable, serviceList}) => {
       <div class="main-center">
         <Switch>
           <Route path='/addTask'>
-            <AddService setDummyVariable={setDummyVariable} serviceList={filteredServices}/>
+            <AddService setDummyVariable={setDummyVariable} serviceList={servicesFilteredByCategory}/>
           </Route>
           <Route path="/construction-works">
-            <ServicesList serviceList={filteredServices} />
+            <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/finishing-works">{/* <Context /> */}
-            <ServicesList serviceList={filteredServices} />
+          <Route path="/hydraulic-works">{/* <Context /> */}
+            <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
           <Route path="/electrical-works">{/* <Lists /> */}
-            <ServicesList serviceList={filteredServices} />
+            <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
           <Route path="/all-works">
             <ServicesList serviceList={serviceList} />
           </Route>
           <Route path="/">
            {/* <ServicesList serviceList={serviceList} /> */}
-           <LandingPage serviceList={serviceList} setFilteredServices={setFilteredServices} />
+           <LandingPage serviceList={serviceList} setServicesFilteredByCategory={setServicesFilteredByCategory} />
           </Route>
         </Switch>
       </div>
