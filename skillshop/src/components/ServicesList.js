@@ -1,5 +1,5 @@
 import "./../styles/ServiceList.css"
-
+import { Link } from "react-router-dom";
 import Service from "./Service.js";
 
 const ServicesList = ({serviceList}) => {
@@ -9,6 +9,9 @@ const ServicesList = ({serviceList}) => {
       {serviceList.map(service => {
         return <Service key={service.id} service={service} />;
       })}
+      <Link  to="/">
+        <button class="list-button">POWRÓT ⇦</button>
+      </Link>
     </div>
   );
 };

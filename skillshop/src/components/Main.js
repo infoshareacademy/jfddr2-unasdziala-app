@@ -18,40 +18,40 @@ const Main = ({setDummyVariable, serviceList}) => {
           <Route path='/addTask'>
             <AddService setDummyVariable={setDummyVariable} serviceList={servicesFilteredByCategory}/>
           </Route>
-          <Route path="/construction-works">
+          <Route path="/construction-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/hydraulic-works">{/* <Context /> */}
+          <Route path="/hydraulic-services">{/* <Context /> */}
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/electrical-works">{/* <Lists /> */}
+          <Route path="/electrical-services">{/* <Lists /> */}
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/finishing-works">
+          <Route path="/finishing-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/carpentry-works">
+          <Route path="/carpentry-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/architecture-works">
+          <Route path="/architecture-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/cleaning-works">
+          <Route path="/cleaning-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>      
-          <Route path="/painting-works">
+          <Route path="/painting-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>      
-          <Route path="/transport-works">
+          <Route path="/transport-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>  
-          <Route path="/it-works">
+          <Route path="/it-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>  
-          <Route path="/chimney-works">
+          <Route path="/chimney-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/all-works">
+          <Route path="/all-services">
             <ServicesList serviceList={serviceList} />
           </Route>
           <Route path="/">

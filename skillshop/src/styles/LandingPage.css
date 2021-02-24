@@ -24,7 +24,7 @@ ul > li {
   list-style: none;
 }
 
-.box {
+.box, .box1  {
   display: flex;
   background-color: #24303e;
   width: 20vh;
@@ -42,12 +42,17 @@ ul > li {
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
 }
 
-.box:hover{
+.box:hover, .box1:hover {
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.75); 
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.75);
 }
 
-.box:active{
+.box:active, .box1:active{
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.25); 
   box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.25); 
+}
+
+.box1 {
+  background-color: #ff9900;
+  color: white;
 }

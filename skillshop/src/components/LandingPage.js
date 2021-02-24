@@ -16,28 +16,28 @@ const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
     <div className="main-container">
       <ul>
         <li>
-          <Link exact activeClassName="active" to="/construction-works">
+          <Link exact activeClassName="active" to="/construction-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi budowlane")}>
               Budownictwo
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/hydraulic-works">
+          <Link exact activeClassName="active" to="/hydraulic-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi hydrauliczne")}>
               Hydraulika
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/electrical-works">
+          <Link exact activeClassName="active" to="/electrical-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi elektryczne")}>
               Elektryka
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/finishing-works">
+          <Link exact activeClassName="active" to="/finishing-services">
             <div className="box"  onClick={(e) => filterByCategory(e, "Usługi wykończeniowe")}>
               Wykończenia
             </div>
@@ -46,28 +46,28 @@ const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
       </ul>
       <ul>
         <li>
-          <Link exact activeClassName="active" to="/carpentry-works">
+          <Link exact activeClassName="active" to="/carpentry-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi stolarskie")}>
               Stolarstwo
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/architecture-works">
+          <Link exact activeClassName="active" to="/architecture-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi architektoniczne")}>
               Architektura
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/cleaning-works">
+          <Link exact activeClassName="active" to="/cleaning-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi sprzątające")}>
               Sprzątanie
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/painting-works">
+          <Link exact activeClassName="active" to="/painting-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi malarskie")}>
               Malarstwo
             </div>
@@ -76,29 +76,29 @@ const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
       </ul>
       <ul>
       <li>
-          <Link exact activeClassName="active" to="/transport-works">
+          <Link exact activeClassName="active" to="/transport-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi transportowe")}>
               Transport
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/it-works">
+          <Link exact activeClassName="active" to="/it-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi informatyczne")}>
               Informatyka
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/chimney-works">
+          <Link exact activeClassName="active" to="/chimney-services">
             <div className="box" onClick={(e) => filterByCategory(e, "Usługi kominiarskie")}>
               Kominiarstwo
             </div>
           </Link>
         </li>
         <li>
-          <Link exact activeClassName="active" to="/all-works">
-            <div className="box">
+          <Link exact activeClassName="active" to="/all-services">
+            <div className="box1">
               Wszystkie
             </div>
           </Link>
