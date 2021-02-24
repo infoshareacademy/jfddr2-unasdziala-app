@@ -43,7 +43,7 @@ const LandingPage = ({ serviceList, setServiceList }) => {
       </li>
 
       <li>
-        <Link exact activeClassName="active" to="/electrical-works222">
+        <Link exact activeClassName="active" to="/all-works">
           <div className="box4">
             Wszystkie
           </div>

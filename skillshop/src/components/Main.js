@@ -28,7 +28,7 @@ const Main = ({setDummyVariable, serviceList}) => {
             <ServicesList serviceList={filteredServices} />
           </Route>
           <Route path="/all-works">
-            <ServicesList serviceList={filteredServices} />
+            <ServicesList serviceList={serviceList} />
           </Route>
           <Route path="/">
            {/* <ServicesList serviceList={serviceList} /> */}
