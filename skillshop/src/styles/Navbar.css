@@ -5,8 +5,6 @@
   width: 98vw;
   height: 10vh;
   background-color: #24303e;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
 }
 
 .nav-input {

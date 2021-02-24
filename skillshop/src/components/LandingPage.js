@@ -1,7 +1,5 @@
 import "./../styles/LandingPage.css";
 import { Link } from "react-router-dom";
-import Service from "./Service";
-import ServicesList from "./ServicesList";
 
 const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
   // console.log(serviceList);
@@ -11,47 +9,101 @@ const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
   const filterByCategory = (e, category) => {
     let filteredServicesArray = [];
     filteredServicesArray = serviceList.filter(service => service.category === category);
-    // console.log(filteredServicesArray)
     setServicesFilteredByCategory(filteredServicesArray)
-    // setServiceList(filteredServicesArray);
   }
 
   return (
-    <div className="containers">
-    <ul>
+    <div className="main-container">
+      <ul>
+        <li>
+          <Link exact activeClassName="active" to="/construction-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi budowlane")}>
+              Budownictwo
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/hydraulic-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi hydrauliczne")}>
+              Hydraulika
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/electrical-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi elektryczne")}>
+              Elektryka
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/finishing-works">
+            <div className="box"  onClick={(e) => filterByCategory(e, "Usługi wykończeniowe")}>
+              Wykończenia
+            </div>
+          </Link>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <Link exact activeClassName="active" to="/carpentry-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi stolarskie")}>
+              Stolarstwo
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/architecture-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi architektoniczne")}>
+              Architektura
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/cleaning-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi sprzątające")}>
+              Sprzątanie
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/painting-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi malarskie")}>
+              Malarstwo
+            </div>
+          </Link>
+        </li>
+      </ul>
+      <ul>
       <li>
-        <Link exact activeClassName="active" to="/construction-works">
-          <div className="box1" onClick={(e) => filterByCategory(e, "Usługi budowlane")}>
-            Budownictwo
-          </div>
-        </Link>
-      </li>
-
-      <li>
-        <Link exact activeClassName="active" to="/hydraulic-works">
-          <div className="box2" onClick={(e) => filterByCategory(e, "Usługi hydrauliczne")}>
-            Hydraulika
-          </div>
-        </Link>
-      </li>
-
-      <li>
-        <Link exact activeClassName="active" to="/electrical-works">
-          <div className="box3" onClick={(e) => filterByCategory(e, "Usługi elektryczne")}>
-            Elektryka
-          </div>
-        </Link>
-      </li>
-
-      <li>
-        <Link exact activeClassName="active" to="/all-works">
-          <div className="box4">
-            Wszystkie
-          </div>
-        </Link>
-      </li>
-    
-    </ul>
+          <Link exact activeClassName="active" to="/transport-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi transportowe")}>
+              Transport
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/it-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi informatyczne")}>
+              Informatyka
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/chimney-works">
+            <div className="box" onClick={(e) => filterByCategory(e, "Usługi kominiarskie")}>
+              Kominiarstwo
+            </div>
+          </Link>
+        </li>
+        <li>
+          <Link exact activeClassName="active" to="/all-works">
+            <div className="box">
+              Wszystkie
+            </div>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };

@@ -39,6 +39,10 @@
     {
       "id": 10,
       "category": "Usługi informatyczne"
+    },
+    {
+      "id": 11,
+      "category": "Usługi kominiarskie"
     }
   ]
 }

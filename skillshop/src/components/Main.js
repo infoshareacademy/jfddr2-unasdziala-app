@@ -27,12 +27,35 @@ const Main = ({setDummyVariable, serviceList}) => {
           <Route path="/electrical-works">{/* <Lists /> */}
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
+          <Route path="/finishing-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>
+          <Route path="/carpentry-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>
+          <Route path="/architecture-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>
+          <Route path="/cleaning-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>      
+          <Route path="/painting-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>      
+          <Route path="/transport-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>  
+          <Route path="/it-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>  
+          <Route path="/chimney-works">
+            <ServicesList serviceList={servicesFilteredByCategory} />
+          </Route>
           <Route path="/all-works">
             <ServicesList serviceList={serviceList} />
           </Route>
           <Route path="/">
-           {/* <ServicesList serviceList={serviceList} /> */}
-           <LandingPage serviceList={serviceList} setServicesFilteredByCategory={setServicesFilteredByCategory} />
+            <LandingPage serviceList={serviceList} setServicesFilteredByCategory={setServicesFilteredByCategory} />
           </Route>
         </Switch>
       </div>
