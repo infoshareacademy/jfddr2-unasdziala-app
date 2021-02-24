@@ -1,11 +1,10 @@
 .footer {
   display: flex;
-
-  width: 99vw;
+  width: 98vw;
   height: 5vh;
   justify-content: center;
   align-items: center;
-  background-color: #131a22;
+  background-color: #24303e;
   color: white;
   font-family: "Oswald", sans-serif;
 }

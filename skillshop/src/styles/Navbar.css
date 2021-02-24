@@ -2,9 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 99vw;
+  width: 98vw;
   height: 10vh;
-  background-color: #141921;
+  background-color: #24303e;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
 }
 
 .nav-input {
@@ -16,8 +18,8 @@
 
 .nav-logo {
   background-image: url("../img/logo-1.png");
-  width: 10vh;
-  height: 10vh;
+  width: 9vh;
+  height: 9vh;
   border-radius: 50%;
   border: solid 2px black;
   margin-left: 2.5%;

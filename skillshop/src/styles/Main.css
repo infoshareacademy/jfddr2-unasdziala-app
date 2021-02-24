@@ -1,26 +1,28 @@
 .main {
   display: flex;
-  width: 99vw;
-  height: 80vh;
+  width: 98vw;
+  height: 84vh;
   /*background-color: ##8e949b;*/
   font-family: "Oswald", sans-serif;
   font-weight: 200;
+  margin-top: 10vh;
+  overflow: hidden;
 }
 
 .main-left,
 .main-right {
   display: flex;
-  width: 20vw;
-  height: 80vh;
-  color: white;
-  background-color: #24303e;
-}
-
-.main-center {
-  width: 60vw;
-  height: 80vh;
+  width: 15vw;
+  height: 84vh;
+  color: black;
   background-color: #f2f2f2;
 }
 
-.main-right {
+.main-center {
+  width: 70vw;
+  height: 84vh;
+  background-color: #f2f2f2;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
