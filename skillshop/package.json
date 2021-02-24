@@ -12,6 +12,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
+    
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,6 +24,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
+      
     ]
   },
   "browserslist": {

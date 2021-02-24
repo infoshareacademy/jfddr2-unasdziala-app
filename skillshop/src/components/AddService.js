@@ -65,10 +65,15 @@ const AddService = ({ setDummyVariable, serviceList }) => {
 
         {/* <input type="submit" value="Wyślij" /> */}
         <div className="service-container-input">
-<<<<<<< HEAD
           <label>
             Tytuł usługi:&nbsp;&nbsp;
-            <input type="text" id="title" name="title" onChange={updateField} />
+            <input
+              type="text"
+              id="title"
+              name="title"
+              onChange={updateField}
+              required
+            />
           </label>
           <label>
             Imię i nazwisko:&nbsp;&nbsp;
@@ -77,6 +82,7 @@ const AddService = ({ setDummyVariable, serviceList }) => {
               id="fullName"
               name="fullName"
               onChange={updateField}
+              required
             />
           </label>
           <label>
@@ -86,6 +92,7 @@ const AddService = ({ setDummyVariable, serviceList }) => {
               id="email"
               name="email"
               onChange={updateField}
+              required
             />
           </label>
           <label>
@@ -95,6 +102,7 @@ const AddService = ({ setDummyVariable, serviceList }) => {
               id="phoneNumber"
               name="phoneNumber"
               onChange={updateField}
+              required
             />
           </label>
           <label>
@@ -104,11 +112,18 @@ const AddService = ({ setDummyVariable, serviceList }) => {
               id="address"
               name="address"
               onChange={updateField}
+              required
             />
           </label>
           <label>
             Miasto:&nbsp;&nbsp;
-            <input type="text" id="city" name="city" onChange={updateField} />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              onChange={updateField}
+              required
+            />
           </label>
           <label>
             Opis usługi:&nbsp;&nbsp;
@@ -117,51 +132,28 @@ const AddService = ({ setDummyVariable, serviceList }) => {
               id="description"
               name="description"
               onChange={updateField}
+              required
             />
           </label>
           <label>
             Cena:&nbsp;&nbsp;
-            <input type="text" id="price" name="price" onChange={updateField} />
+            <input
+              type="text"
+              id="price"
+              name="price"
+              onChange={updateField}
+              required
+            />
           </label>
-=======
-        <label>
-          Tytuł usługi:&nbsp;&nbsp;
-          <input type="text" id="title" name="title" onChange={updateField} required/>
-        </label>
-        <label>
-          Imię i nazwisko:&nbsp;&nbsp;
-          <input type="text" id="fullName" name="fullName" onChange={updateField} required/>
-        </label>
-        <label >
-          Adres email:&nbsp;&nbsp;
-          <input type="email" id="email" name="email" onChange={updateField} required/>
-        </label>
-        <label>
-          Numer telefonu:&nbsp;&nbsp;
-          <input type="tel" id="phoneNumber" name="phoneNumber" onChange={updateField} required/>
-        </label>
-        <label>
-          Adres:&nbsp;&nbsp;
-          <input type="text" id="address" name="address" onChange={updateField} required/>
-        </label>
-        <label>
-          Miasto:&nbsp;&nbsp;
-          <input type="text" id="city" name="city" onChange={updateField} required/>
-        </label>
-        <label>
-          Opis usługi:&nbsp;&nbsp;
-          <input type="text" id="description" name="description" onChange={updateField} required/>
-        </label>
-        <label>
-          Cena:&nbsp;&nbsp;
-          <input type="text" id="price" name="price" onChange={updateField} required />
-        </label>
->>>>>>> 6ffd75da6f8ac84886fda034e7d3164520afa16f
         </div>
       </form>
       <div className="btn-container">
         <Link to="/">
-          <button className="add-button green" onClick={addServiceToDB} required>
+          <button
+            className="add-button green"
+            onClick={addServiceToDB}
+            required
+          >
             DODAJ
           </button>
         </Link>
