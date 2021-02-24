@@ -2,6 +2,7 @@ import "./../styles/Main.css";
 import {Switch, Route} from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
+import LandingPage from "./LandingPage";
 
 const Main = ({setDummyVariable, serviceList}) => {
 

@@ -8,6 +8,7 @@ import firebase from "./../firebase/config.js";
 import Navbar from "./Navbar.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
+// import LandingPage from "./LandingPage.js"
 
 const MainContainer = () => {
 
@@ -34,6 +35,7 @@ const MainContainer = () => {
     <div class="main-container">
       <Router>
         <Navbar services={serviceList}/>
+        {/* <LandingPage /> */}
         <Main serviceList={serviceList} setDummyVariable={setDummyVariable}/>
         <Footer />
       </Router>
