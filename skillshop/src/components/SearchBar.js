@@ -1,22 +1,11 @@
 import { React, useState } from "react";
-import ServicesList from "./ServicesList";
+// import ServicesList from "./ServicesList";
 
-function SearchBar() {
+export default function SearchBar() {
   const [filter, setFilter] = useState("");
-
-  return (
-    (<Header filter={filter} setFilter={setFilter} />),
-    (<TileContainer serviceList={ServicesList} filter={filter} />)
-  );
+  console.log(SearchInput.value);
+  return <SearchInput filter={filter} setFilter={setFilter} />;
 }
-
-const TileContainer = ({ serviceList }) => {
-  return <ServicesList serviceList={serviceList} />;
-};
-
-const Header = ({ setFilter }) => {
-  return <SearchInput setFilter={setFilter} />;
-};
 
 const SearchInput = ({ setFilter }) => {
   return (
@@ -29,4 +18,15 @@ const SearchInput = ({ setFilter }) => {
   );
 };
 
-export default SearchBar;
+// (<Header filter={filter} setFilter={setFilter} />),
+// (<TileContainer serviceList={ServicesList} filter={filter} />)
+//
+// }
+
+// const TileContainer = ({ serviceList }) => {
+//   return <ServicesList serviceList={serviceList} />;
+// };
+
+// const Header = ({ setFilter }) => {
+//   return <SearchInput setFilter={setFilter} />;
+// };

@@ -1,10 +1,8 @@
-import "./../styles/MainContainer.css"
+import "./../styles/MainContainer.css";
 
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-
 import firebase from "./../firebase/config.js";
-
 import Navbar from "./Navbar.js";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
@@ -33,7 +31,11 @@ const MainContainer = () => {
     <div class="main-container">
       <Router>
         <Navbar services={serviceList} />
-        <Main serviceList={serviceList} setDummyVariable={setDummyVariable} />
+        <Main
+          serviceList={serviceList}
+          setServiceList={setServiceList}
+          setDummyVariable={setDummyVariable}
+        />
         <Footer />
       </Router>
     </div>
