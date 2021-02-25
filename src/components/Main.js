@@ -1,11 +1,10 @@
 import "../styles/Main.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 import Categories from "./Categories";
 
-const Main = ({ setDummyVariable, serviceList }) => {
+const Main = ({ setDummyVariable, services }) => {
   const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
     []
   );
@@ -23,49 +22,8 @@ const Main = ({ setDummyVariable, serviceList }) => {
               serviceList={servicesFilteredByCategory}
             />
           </Route>
-          <Route path="/construction-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/hydraulic-services">
-            {/* <Context /> */}
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/electrical-services">
-            {/* <Lists /> */}
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/finishing-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/carpentry-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/architecture-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/cleaning-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/painting-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/transport-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/it-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/chimney-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/all-services">
-            <ServicesList serviceList={serviceList} />
-          </Route>
           <Route path="/">
-            <Categories
-              serviceList={serviceList}
-              setServicesFilteredByCategory={setServicesFilteredByCategory}
-            />
+            <Categories services={services} />
           </Route>
         </Switch>
       </div>
