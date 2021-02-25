@@ -7,7 +7,7 @@ import "./styles/MainContainer.css";
 
 function App() {
   const [dummyVariable, setDummyVariable] = useState([]);
-  const [serviceList, setServiceList] = useState([]);
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
     firebase
@@ -21,18 +21,14 @@ function App() {
             id: service.id,
           };
         });
-        setServiceList(services);
+        setServices(services);
       });
   }, [dummyVariable]);
 
   return (
     <div className="main-container">
-      <Navbar services={serviceList} />
-      <Main
-        serviceList={serviceList}
-        setServiceList={setServiceList}
-        setDummyVariable={setDummyVariable}
-      />
+      <Navbar services={services} />
+      <Main services={services} setDummyVariable={setDummyVariable} />
       <Footer />
     </div>
   );
