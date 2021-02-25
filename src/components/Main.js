@@ -11,20 +11,27 @@ const Main = ({ setDummyVariable, serviceList }) => {
   );
 
   return (
-    <div class="main">
-      <div class="main-left">przestrzeń do wykorzystania w późniejszych wersjach projektu</div>
-      <div class="main-center">
+    <div className="main">
+      <div className="main-left">
+        przestrzeń do wykorzystania w późniejszych wersjach projektu
+      </div>
+      <div className="main-center">
         <Switch>
-          <Route path='/addTask'>
-            <AddService setDummyVariable={setDummyVariable} serviceList={servicesFilteredByCategory}/>
+          <Route path="/addTask">
+            <AddService
+              setDummyVariable={setDummyVariable}
+              serviceList={servicesFilteredByCategory}
+            />
           </Route>
           <Route path="/construction-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/hydraulic-services">{/* <Context /> */}
+          <Route path="/hydraulic-services">
+            {/* <Context /> */}
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/electrical-services">{/* <Lists /> */}
+          <Route path="/electrical-services">
+            {/* <Lists /> */}
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
           <Route path="/finishing-services">
@@ -55,11 +62,16 @@ const Main = ({ setDummyVariable, serviceList }) => {
             <ServicesList serviceList={serviceList} />
           </Route>
           <Route path="/">
-            <Categories serviceList={serviceList} setServicesFilteredByCategory={setServicesFilteredByCategory} />
+            <Categories
+              serviceList={serviceList}
+              setServicesFilteredByCategory={setServicesFilteredByCategory}
+            />
           </Route>
         </Switch>
       </div>
-      <div class="main-right">przestrzeń do wykorzystania w późniejszych wersjach projektu</div>
+      <div className="main-right">
+        przestrzeń do wykorzystania w późniejszych wersjach projektu
+      </div>
     </div>
   );
 };
