@@ -4,12 +4,6 @@ import ServicesList from "./ServicesList";
 import { categories } from "../helpers/categories";
 
 const Categories = ({ services, setServicesFilteredByCategory }) => {
-  const filterByCategory = (e, category) => {
-    const filteredServicesArray =
-      services.filter((service) => service.category === category) || [];
-    setServicesFilteredByCategory(filteredServicesArray);
-  };
-
   return (
     <div className="main-container">
       <Switch>
@@ -36,6 +30,7 @@ const Categories = ({ services, setServicesFilteredByCategory }) => {
                 </Link>
               </li>
             ))}
+
             <li>
               <Link exact activeClassName="active" to="/all-services">
                 <div className="box1">Wszystkie</div>

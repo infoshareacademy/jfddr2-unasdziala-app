@@ -1,23 +1,36 @@
 import "../styles/Service.css";
+import { Link, useRouteMatch } from "react-router-dom";
 
-const Service = ({service}) => {
+const Service = ({ service }) => {
+  const { url } = useRouteMatch();
+
   return (
     <div className="service">
-      <div class="informations">
-        <div class="header">
+      <div className="informations">
+        <div className="header">
           <h1>{service.title}</h1>
           <div>{service.description}</div>
         </div>
-        <div class="data">
-          <div><b>Kategoria usług: </b>{service.category}</div>
-          <div><b>Miasto: </b>{service.city}</div>
-          <div><b>Cena: </b>{service.price}</div>
+        <div className="data">
+          <div>
+            <b>Kategoria usług: </b>
+            {service.category}
+          </div>
+          <div>
+            <b>Miasto: </b>
+            {service.city}
+          </div>
+          <div>
+            <b>Cena: </b>
+            {service.price}
+          </div>
         </div>
       </div>
-      <div class="details">
-        <button class="service-button">SZCZEGÓŁY</button>
+      <div className="details">
+        <Link to={`${url}/${service.title}`}>
+          <button className="service-button">SZCZEGÓŁY</button>
+        </Link>
       </div>
-
     </div>
   );
 };
