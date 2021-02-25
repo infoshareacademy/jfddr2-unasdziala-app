@@ -1,7 +1,7 @@
 import "../styles/LandingPage.css";
 import { Link } from "react-router-dom";
 
-const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
+const Categories = ({ serviceList, setServicesFilteredByCategory }) => {
   // console.log(serviceList);
 
   console.log(serviceList)
@@ -108,4 +108,4 @@ const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
   );
 };
 
-export default LandingPage;
+export default Categories;
