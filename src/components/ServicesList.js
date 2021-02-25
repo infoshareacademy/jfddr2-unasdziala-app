@@ -1,4 +1,4 @@
-import "./../styles/ServiceList.css"
+import "../styles/ServiceList.css"
 import { Link } from "react-router-dom";
 import Service from "./Service.js";
 

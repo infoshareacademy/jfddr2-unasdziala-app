@@ -1,4 +1,4 @@
-import "./../styles/Main.css";
+import "../styles/Main.css";
 
 import { useState } from "react";
 import {Switch, Route} from "react-router-dom";
@@ -38,16 +38,16 @@ const Main = ({setDummyVariable, serviceList}) => {
           </Route>
           <Route path="/cleaning-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>      
+          </Route>
           <Route path="/painting-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>      
+          </Route>
           <Route path="/transport-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>  
+          </Route>
           <Route path="/it-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>  
+          </Route>
           <Route path="/chimney-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>

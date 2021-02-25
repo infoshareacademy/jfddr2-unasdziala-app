@@ -1,5 +1,5 @@
-import "./../styles/AddService.css"
-import firebase from "./../firebase/config.js";
+import "../styles/AddService.css"
+import firebase from "../firebase/config.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -33,7 +33,7 @@ const AddService = ({setDummyVariable, serviceList}) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
-      /*UWAGA! category nie zadziała jeśli dodatkowo jakieś inne pole nie zostanie zmienione. 
+      /*UWAGA! category nie zadziała jeśli dodatkowo jakieś inne pole nie zostanie zmienione.
       Zastanowić się nad walidacją */
       "category": category
     })
@@ -60,7 +60,7 @@ const AddService = ({setDummyVariable, serviceList}) => {
             })}
           </select>
         </label>
-        
+
         {/* <input type="submit" value="Wyślij" /> */}
         <div className="service-container-input">
         <label>

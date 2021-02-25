@@ -1,4 +1,4 @@
-import "./../styles/Navbar.css";
+import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
 // import {SearchBar} from "./SearchBar"
 

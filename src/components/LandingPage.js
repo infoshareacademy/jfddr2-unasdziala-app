@@ -1,4 +1,4 @@
-import "./../styles/LandingPage.css";
+import "../styles/LandingPage.css";
 import { Link } from "react-router-dom";
 
 const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
