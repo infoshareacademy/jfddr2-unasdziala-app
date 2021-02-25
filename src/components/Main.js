@@ -1,14 +1,14 @@
 import "../styles/Main.css";
-
 import { useState } from "react";
-import {Switch, Route} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
-import LandingPage from "./LandingPage";
+import Categories from "./Categories";
 
-const Main = ({setDummyVariable, serviceList}) => {
-
-  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState([]);
+const Main = ({ setDummyVariable, serviceList }) => {
+  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
+    []
+  );
 
   return (
     <div class="main">
@@ -55,7 +55,7 @@ const Main = ({setDummyVariable, serviceList}) => {
             <ServicesList serviceList={serviceList} />
           </Route>
           <Route path="/">
-            <LandingPage serviceList={serviceList} setServicesFilteredByCategory={setServicesFilteredByCategory} />
+            <Categories serviceList={serviceList} setServicesFilteredByCategory={setServicesFilteredByCategory} />
           </Route>
         </Switch>
       </div>
