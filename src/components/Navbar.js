@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div class="navbar">
-      <Link  to="/"><div class="nav-logo">SkillShop</div></Link>
+    <div className="navbar">
+      <Link to="/">
+        <div className="nav-logo">SkillShop</div>
+      </Link>
       {/* <SearchBar /> */}
-      <input class="nav-input" type="text"></input>
+      <input className="nav-input" placeholder="Szukaj..." type="text" />
       <Link to="/addTask">
-        <button class="nav-button">DODAJ USŁUGĘ</button>
+        <button className="nav-button">DODAJ USŁUGĘ</button>
       </Link>
     </div>
   );
