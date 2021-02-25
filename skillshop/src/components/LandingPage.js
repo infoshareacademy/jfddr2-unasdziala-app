@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
   // console.log(serviceList);
 
-  console.log(serviceList);
-
   const filterByCategory = (e, category) => {
     let filteredServicesArray = [];
     filteredServicesArray = serviceList.filter(

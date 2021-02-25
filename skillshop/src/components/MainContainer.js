@@ -10,6 +10,12 @@ import Footer from "./Footer.js";
 const MainContainer = () => {
   const [dummyVariable, setDummyVariable] = useState([]);
   const [serviceList, setServiceList] = useState([]);
+  const [filteredServices, setFilteredServices] = useState([]);
+  console.log("filteredservices:", filteredServices);
+
+  useEffect(() => {
+    setFilteredServices(serviceList);
+  }, [serviceList]);
 
   useEffect(() => {
     firebase
@@ -30,9 +36,9 @@ const MainContainer = () => {
   return (
     <div class="main-container">
       <Router>
-        <Navbar services={serviceList} />
+        <Navbar services={serviceList} onFilter={setFilteredServices} />
         <Main
-          serviceList={serviceList}
+          serviceList={filteredServices}
           setServiceList={setServiceList}
           setDummyVariable={setDummyVariable}
         />
