@@ -3,15 +3,18 @@ import firebase from "./../firebase/config.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { categories } from "../helpers/categories";
+
 const AddService = ({ setDummyVariable, serviceList }) => {
+
   const [categoriesList, setCategoriesList] = useState([]);
 
   useEffect(() => {
-    fetch("./data/categories.json")
-      .then((res) => res.json())
-      .then((categoriesList) => {
-        setCategoriesList(categoriesList.categories);
-      });
+    const categoriesArray = [];
+    categories.forEach((category) => {
+      categoriesArray.push(category.filter);
+    })
+    setCategoriesList(categoriesArray);
   }, []);
 
   const [category, setCategory] = useState("Usługi budowlane");
@@ -53,10 +56,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            {categoriesList.map((category) => {
+            {categoriesList.map((category, id) => {
               return (
-                <option key={category.id} value={category.category}>
-                  {category.category}
+                <option key={id} value={category}>
+                  {category}
                 </option>
               );
             })}
