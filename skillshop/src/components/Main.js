@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 import LandingPage from "./LandingPage";
+import SignUpUser from "./SignUpUser"
 
 import { categories } from "../helpers/categories";
 
@@ -15,7 +16,7 @@ const Main = ({ setDummyVariable, serviceList }) => {
   return (
     <div class="main">
       <div class="main-left">
-        przestrzeń do wykorzystania w późniejszych wersjach projektu
+        {/* przestrzeń do wykorzystania w późniejszych wersjach projektu */}
       </div>
       <div class="main-center">
         <Switch>
@@ -25,6 +26,10 @@ const Main = ({ setDummyVariable, serviceList }) => {
               serviceList={servicesFilteredByCategory}
             />
           </Route>
+          <Route path="/sign-up-user">
+            <SignUpUser/>
+          </Route>
+
           {categories.map(category =>{
             return(
               <Route path={category.path}>
@@ -44,7 +49,7 @@ const Main = ({ setDummyVariable, serviceList }) => {
         </Switch>
       </div>
       <div class="main-right">
-        przestrzeń do wykorzystania w późniejszych wersjach projektu
+        {/* przestrzeń do wykorzystania w późniejszych wersjach projektu */}
       </div>
     </div>
   );

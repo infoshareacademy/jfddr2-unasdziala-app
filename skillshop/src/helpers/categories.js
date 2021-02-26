@@ -1,5 +1,5 @@
-import { Route, Switch } from "react-router-dom";
-import ServicesList from "../components/ServicesList";
+// import { Route, Switch } from "react-router-dom";
+// import ServicesList from "../components/ServicesList";
 
 export const categories = [
   {

@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { categories } from "../helpers/categories";
 
 const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
-
-  // console.log(categories)
   
   const filterByCategory = (e, category) => {
     let filteredServicesArray = [];

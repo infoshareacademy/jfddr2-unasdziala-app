@@ -7,20 +7,31 @@
   background-color: #24303e;
 }
 
-.custom-link1{
+.logo-link{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: inherit;
-  width: 15vw;
+  width: 30vw;
+  height: 10vh;
 }
 
-.custom-link2{
+.unregistered-user, .registered-user{
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  height: inherit;
-  width: 20vw;
+  height: 10vh;
+  width: 30vw;
+  margin-right: 2.5vw;
+}
+
+.custom-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: initial;
+  margin-bottom: 0;
 }
 
 .nav-input {
@@ -50,5 +61,5 @@
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
-font-family: 'Noto Serif KR', serif;
+  font-family: 'Noto Serif KR', serif;
 }

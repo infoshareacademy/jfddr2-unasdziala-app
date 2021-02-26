@@ -4,15 +4,34 @@ import SearchBar from "./SearchBar";
 
 const Navbar = ({ services, onFilter }) => {
   return (
-    <div class="navbar">
-      <Link class="custom-link1" to="/">
-        <div class="nav-logo">SkillShop</div>
+    <div className="navbar">
+      <Link className="logo-link" to="/">
+        <div className="nav-logo">SkillShop</div>
       </Link>
       <SearchBar services={services} onFilter={onFilter} />
-      {/* <input class="nav-input" type="text"></input> */}
-      <Link class="custom-link2" to="/addTask">
-        <button class="nav-button">DODAJ USŁUGĘ</button>
-      </Link>
+
+      
+
+      <div className="unregistered-user">
+        <Link className="custom-link" to="/sign-up-user">
+          <button className="nav-button">REJESTRACJA</button>
+        </Link>
+        <Link className="custom-link" to="/addTask">
+          <button className="nav-button">LOGOWANIE</button>
+        </Link>      
+      </div>
+
+      {/* <div className="registered-user">
+        <Link className="custom-link" to="/addTask">
+          <button className="nav-button">DODAJ<br></br>USŁUGĘ</button>
+        </Link>
+        <Link className="custom-link" to="/addTask">
+          <button class="nav-button">PANEL<br></br>UŻYTKOWNIKA</button>
+        </Link>
+        <Link className="custom-link" to="/addTask">
+          <button className="nav-button">WYLOGUJ<br></br>UŻYTKOWNIKA</button>
+        </Link>    
+      </div> */}
     </div>
   );
 };
