@@ -4,7 +4,7 @@ import "./../styles/SignUpUser.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const SignUpUser = () => {
+const SignInUser = () => {
 
     const [credentials, setCredentials] = useState({
         email: "",
@@ -18,17 +18,16 @@ const SignUpUser = () => {
         });
     };
 
-    const signUpUser = () => {
+    const signInUser = () => {
         firebase
-            .auth()
-            .createUserWithEmailAndPassword(credentials.email, credentials.password)
-            .then((cred) => {
-                console.log(cred);
-                firebase.auth().signOut();
-            })
-            .catch((reason) => {
-                alert(reason.message);
-            });
+		.auth()
+		.signInWithEmailAndPassword(credentials.email, credentials.password)
+		.then((cred) => {
+			console.log(cred);
+		})
+		.catch((reason) => {
+			alert(reason.message);
+		});
     };
 
     return (
@@ -59,7 +58,7 @@ const SignUpUser = () => {
             &nbsp;
             <div class="btn-container">
                 <Link to="/">
-                    <button className="add-button green" onClick={signUpUser}>REJESTRACJA</button>
+                    <button className="add-button green" onClick={signInUser}>LOGOWANIE</button>
                 </Link>
                 <Link to="/">
                     <button className="add-button red">ANULUJ</button>
@@ -70,4 +69,4 @@ const SignUpUser = () => {
     );
 };
 
-export default SignUpUser;
+export default SignInUser;

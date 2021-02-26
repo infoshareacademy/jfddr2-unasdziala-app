@@ -16,7 +16,7 @@ const Navbar = ({ services, onFilter }) => {
         <Link className="custom-link" to="/sign-up-user">
           <button className="nav-button">REJESTRACJA</button>
         </Link>
-        <Link className="custom-link" to="/addTask">
+        <Link className="custom-link" to="/sign-in-user">
           <button className="nav-button">LOGOWANIE</button>
         </Link>      
       </div>

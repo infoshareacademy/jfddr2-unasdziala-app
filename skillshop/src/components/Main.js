@@ -6,6 +6,7 @@ import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 import LandingPage from "./LandingPage";
 import SignUpUser from "./SignUpUser"
+import SignInUser from "./SignInUser"
 
 import { categories } from "../helpers/categories";
 
@@ -29,7 +30,9 @@ const Main = ({ setDummyVariable, serviceList }) => {
           <Route path="/sign-up-user">
             <SignUpUser/>
           </Route>
-
+          <Route path="/sign-in-user">
+            <SignInUser/>
+          </Route>
           {categories.map(category =>{
             return(
               <Route path={category.path}>
