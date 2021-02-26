@@ -18,38 +18,49 @@ export const categories = [
     filter: "Usługi elektryczne",
   },
   {
-    name: "Budownictwo",
-    path: "/construction-services",
-    filter: "Usługi budowlane",
+    name: "Wykończenia",
+    path: "/finishing-services",
+    filter: "Usługi wykończeniowe",
   },
   {
-    name: "Hydraulika",
-    path: "/hydraulic-services",
-    filter: "Usługi hydrauliczne",
+    name: "Stolarstwo",
+    path: "/carpentry-services",
+    filter: "Usługi stolarskie",
   },
   {
-    name: "Elektryka",
-    path: "/electrical-services",
-    filter: "Usługi elektryczne",
+    name: "Architektura",
+    path: "/architecture-services",
+    filter: "Usługi architektoniczne",
   },
   {
-    name: "Budownictwo",
-    path: "/construction-services",
-    filter: "Usługi budowlane",
+    name: "Sprzątanie",
+    path: "/cleaning-services",
+    filter: "Usługi sprzątające",
   },
   {
-    name: "Hydraulika",
-    path: "/hydraulic-services",
-    filter: "Usługi hydrauliczne",
+    name: "Malowanie",
+    path: "/painting-services",
+    filter: "Usługi malarskie",
+  },
+  {
+    name: "Transport",
+    path: "/transport-services",
+    filter: "Usługi transportowe",
+  },
+  {
+    name: "IT",
+    path: "/it-services",
+    filter: "Usługi informatyczne",
+  },
+  {
+    name: "Inne",
+    path: "/other-services",
+    filter: "Usługi różne",
   },
   // i tak dalej
 ];
 
-// "/construction-services"
-// "/hydraulic-services"
-// "/electrical-services"
-// "/finishing-services"
-// "/carpentry-services"
+// "/"
 // "/architecture-services"
 // "/cleaning-services"
 // "/painting-services"

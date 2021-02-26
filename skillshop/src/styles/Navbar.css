@@ -2,13 +2,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 98vw;
+  width: 99vw;
   height: 10vh;
   background-color: #24303e;
 }
 
+.custom-link1{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: inherit;
+  width: 15vw;
+}
+
+.custom-link2{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: inherit;
+  width: 20vw;
+}
+
 .nav-input {
-  width: 45vw;
+  width: 40vw;
   height: 3.5vh;
   border-radius: 5px;
   background-color: white;
