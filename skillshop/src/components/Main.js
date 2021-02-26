@@ -1,30 +1,38 @@
 import "./../styles/Main.css";
 
 import { useState } from "react";
-import {Switch, Route} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 import LandingPage from "./LandingPage";
 
-const Main = ({setDummyVariable, serviceList}) => {
-
-  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState([]);
+const Main = ({ setDummyVariable, serviceList }) => {
+  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
+    []
+  );
 
   return (
     <div class="main">
-      <div class="main-left">przestrzeń do wykorzystania w późniejszych wersjach projektu</div>
+      <div class="main-left">
+        przestrzeń do wykorzystania w późniejszych wersjach projektu
+      </div>
       <div class="main-center">
         <Switch>
-          <Route path='/addTask'>
-            <AddService setDummyVariable={setDummyVariable} serviceList={servicesFilteredByCategory}/>
+          <Route path="/addTask">
+            <AddService
+              setDummyVariable={setDummyVariable}
+              serviceList={servicesFilteredByCategory}
+            />
           </Route>
           <Route path="/construction-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/hydraulic-services">{/* <Context /> */}
+          <Route path="/hydraulic-services">
+            {/* <Context /> */}
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
-          <Route path="/electrical-services">{/* <Lists /> */}
+          <Route path="/electrical-services">
+            {/* <Lists /> */}
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
           <Route path="/finishing-services">
@@ -38,16 +46,16 @@ const Main = ({setDummyVariable, serviceList}) => {
           </Route>
           <Route path="/cleaning-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>      
+          </Route>
           <Route path="/painting-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>      
+          </Route>
           <Route path="/transport-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>  
+          </Route>
           <Route path="/it-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>  
+          </Route>
           <Route path="/chimney-services">
             <ServicesList serviceList={servicesFilteredByCategory} />
           </Route>
@@ -55,11 +63,16 @@ const Main = ({setDummyVariable, serviceList}) => {
             <ServicesList serviceList={serviceList} />
           </Route>
           <Route path="/">
-            <LandingPage serviceList={serviceList} setServicesFilteredByCategory={setServicesFilteredByCategory} />
+            <LandingPage
+              serviceList={serviceList}
+              setServicesFilteredByCategory={setServicesFilteredByCategory}
+            />
           </Route>
         </Switch>
       </div>
-      <div class="main-right">przestrzeń do wykorzystania w późniejszych wersjach projektu</div>
+      <div class="main-right">
+        przestrzeń do wykorzystania w późniejszych wersjach projektu
+      </div>
     </div>
   );
 };

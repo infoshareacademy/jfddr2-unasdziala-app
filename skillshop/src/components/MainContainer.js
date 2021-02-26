@@ -1,4 +1,4 @@
-import "./../styles/MainContainer.css"
+import "./../styles/MainContainer.css";
 
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -8,21 +8,26 @@ import Main from "./Main.js";
 import Footer from "./Footer.js";
 
 const MainContainer = () => {
-
   const [dummyVariable, setDummyVariable] = useState([]);
   const [serviceList, setServiceList] = useState([]);
+  const [filteredServices, setFilteredServices] = useState([]);
+  console.log("filteredservices:", filteredServices);
+
+  useEffect(() => {
+    setFilteredServices(serviceList);
+  }, [serviceList]);
 
   useEffect(() => {
     firebase
       .firestore()
       .collection("services")
       .get()
-      .then(snapshot => {
+      .then((snapshot) => {
         const services = snapshot.docs.map((service) => {
           return {
             ...service.data(),
-            id: service.id
-          }
+            id: service.id,
+          };
         });
         setServiceList(services);
       });
@@ -31,8 +36,12 @@ const MainContainer = () => {
   return (
     <div class="main-container">
       <Router>
-        <Navbar services={serviceList}/>
-        <Main serviceList={serviceList} setServiceList={setServiceList} setDummyVariable={setDummyVariable}/>
+        <Navbar services={serviceList} onFilter={setFilteredServices} />
+        <Main
+          serviceList={filteredServices}
+          setServiceList={setServiceList}
+          setDummyVariable={setDummyVariable}
+        />
         <Footer />
       </Router>
     </div>

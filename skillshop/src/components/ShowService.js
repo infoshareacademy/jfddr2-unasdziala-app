@@ -1,8 +1,7 @@
-import "./../styles/ShowService.css"
+import "./../styles/ShowService.css";
 
-const showMore = () =>{
-
-    return
-}
+const showMore = () => {
+  return;
+};
 
 export default ShowService;

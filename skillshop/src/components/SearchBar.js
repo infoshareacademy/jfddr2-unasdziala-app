@@ -1,56 +1,20 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 
-export default function SearchBar({services}) {
-  // const [services, setServices] = useState([]);
-  const [search, setSearch] = useState("");
-  const [filteredServices, setFilteredServices] = useState([]);
-  const [loading, setLoading] = useState(false);
+export default function SearchBar({ services, onFilter }) {
+  const handleFilterServices = (value) => {
+    const filteredData = services.filter((service) => {
+      return service.description.includes(value);
+    });
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   fetch("./data/services.json")
-  //     .then(res => {
-  //       setServices(res.data);
-  //       setLoading(false);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // }, []);
-
-  useEffect(() => {
-    setFilteredServices(
-      services.filter(service =>
-        service.category.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [search, services]);
-
-  if (loading) {
-    return <p>Szukamy Twojej usługi...</p>;
-  }
+    onFilter(filteredData);
+  };
 
   return (
-    <div>
-      <input
-        type="text"
-        class="nav-input"
-        placeholder="Znajdź usługę..."
-        onChange={e => setSearch(e.target.value)}
-      />
-      {filteredServices.map((service, index) => (
-        <ServiceDetail key={index} {...service} />
-      ))}
-    </div>
+    <input
+      class="nav-input"
+      type="text"
+      placeholder="Znajdź usługę..."
+      onChange={(e) => handleFilterServices(e.target.value)}
+    />
   );
 }
-
-const ServiceDetail = props => {
-  const { category } = props;
-
-  return (
-    <>
-      <p>{category}</p>
-    </>
-  );
-};
