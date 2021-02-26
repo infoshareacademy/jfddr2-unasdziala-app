@@ -3,7 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 2%;
   min-height: 100%;
+  font-family: 'Noto Serif KR', serif;
 }
 
 .add-button {
@@ -37,4 +39,8 @@
 .service-container-input {
   display: flex;
   flex-direction: column;
+  
+}
+input[type="text"]{
+  color: blue;
 }
