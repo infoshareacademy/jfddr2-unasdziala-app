@@ -10,10 +10,10 @@ import SignInUser from "./SignInUser"
 
 import { categories } from "../helpers/categories";
 
-const Main = ({ setDummyVariable, serviceList }) => {
-  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
-    []
-  );
+const Main = ({ setDummyVariable, serviceList, setUserLogInState }) => {
+
+  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState([]);
+
   return (
     <div class="main">
       <div class="main-left">
@@ -31,7 +31,7 @@ const Main = ({ setDummyVariable, serviceList }) => {
             <SignUpUser/>
           </Route>
           <Route path="/sign-in-user">
-            <SignInUser/>
+            <SignInUser setUserLogInState ={setUserLogInState} />
           </Route>
           {categories.map(category =>{
             return(

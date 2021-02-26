@@ -4,7 +4,7 @@ import "./../styles/SignUpUser.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const SignInUser = () => {
+const SignInUser = ({setUserLogInState }) => {
 
     const [credentials, setCredentials] = useState({
         email: "",
@@ -23,7 +23,8 @@ const SignInUser = () => {
 		.auth()
 		.signInWithEmailAndPassword(credentials.email, credentials.password)
 		.then((cred) => {
-			console.log(cred);
+            console.log(cred);
+            setUserLogInState(true)
 		})
 		.catch((reason) => {
 			alert(reason.message);

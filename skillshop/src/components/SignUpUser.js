@@ -25,6 +25,7 @@ const SignUpUser = () => {
             .then((cred) => {
                 console.log(cred);
                 firebase.auth().signOut();
+                alert("Rejestracja zakończona sukcesem");
             })
             .catch((reason) => {
                 alert(reason.message);
