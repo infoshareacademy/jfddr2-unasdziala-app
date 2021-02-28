@@ -5,8 +5,12 @@ import { Switch, Route } from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 import LandingPage from "./LandingPage";
+import SignUpUser from "./SignUpUser";
+import SignInUser from "./SignInUser";
 
-const Main = ({ setDummyVariable, serviceList }) => {
+import { categories } from "../helpers/categories";
+
+const Main = ({ setDummyVariable, serviceList, setUserLogInState }) => {
   const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
     []
   );
@@ -14,7 +18,7 @@ const Main = ({ setDummyVariable, serviceList }) => {
   return (
     <div class="main">
       <div class="main-left">
-        przestrzeń do wykorzystania w późniejszych wersjach projektu
+        {/* przestrzeń do wykorzystania w późniejszych wersjach projektu */}
       </div>
       <div class="main-center">
         <Switch>
@@ -24,41 +28,19 @@ const Main = ({ setDummyVariable, serviceList }) => {
               serviceList={servicesFilteredByCategory}
             />
           </Route>
-          <Route path="/construction-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
+          <Route path="/sign-up-user">
+            <SignUpUser />
           </Route>
-          <Route path="/hydraulic-services">
-            {/* <Context /> */}
-            <ServicesList serviceList={servicesFilteredByCategory} />
+          <Route path="/sign-in-user">
+            <SignInUser setUserLogInState={setUserLogInState} />
           </Route>
-          <Route path="/electrical-services">
-            {/* <Lists /> */}
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/finishing-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/carpentry-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/architecture-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/cleaning-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/painting-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/transport-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/it-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
-          <Route path="/chimney-services">
-            <ServicesList serviceList={servicesFilteredByCategory} />
-          </Route>
+          {categories.map((category) => {
+            return (
+              <Route path={category.path}>
+                <ServicesList serviceList={servicesFilteredByCategory} />
+              </Route>
+            );
+          })}
           <Route path="/all-services">
             <ServicesList serviceList={serviceList} />
           </Route>
@@ -71,7 +53,7 @@ const Main = ({ setDummyVariable, serviceList }) => {
         </Switch>
       </div>
       <div class="main-right">
-        przestrzeń do wykorzystania w późniejszych wersjach projektu
+        {/* przestrzeń do wykorzystania w późniejszych wersjach projektu */}
       </div>
     </div>
   );

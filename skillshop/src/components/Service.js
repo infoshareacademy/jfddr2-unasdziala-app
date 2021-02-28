@@ -1,6 +1,9 @@
 import "./../styles/Service.css";
+import { Link, useRouteMatch } from "react-router-dom";
 
 const Service = ({ service }) => {
+  const { url } = useRouteMatch();
+
   return (
     <div className="service">
       <div class="informations">
@@ -23,9 +26,9 @@ const Service = ({ service }) => {
           </div>
         </div>
       </div>
-      <div class="details">
-        <button class="service-button">SZCZEGÓŁY</button>
-      </div>
+      <Link to={`${url}/${service.title}`}>
+        <button className="service-button">SZCZEGÓŁY</button>
+      </Link>
     </div>
   );
 };

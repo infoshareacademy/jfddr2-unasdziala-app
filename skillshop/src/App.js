@@ -12,6 +12,8 @@ function App() {
   const [serviceList, setServiceList] = useState([]);
   const [filteredServices, setFilteredServices] = useState([]);
 
+  const [userLogInState, setUserLogInState] = useState(false);
+
   useEffect(() => {
     setFilteredServices(serviceList);
   }, [serviceList]);
@@ -35,11 +37,17 @@ function App() {
   return (
     <div class="main-container">
       <Router>
-        <Navbar services={serviceList} onFilter={setFilteredServices} />
+        <Navbar
+          services={serviceList}
+          onFilter={setFilteredServices}
+          userLogInState={userLogInState}
+          setUserLogInState={setUserLogInState}
+        />
         <Main
           serviceList={filteredServices}
           setServiceList={setServiceList}
           setDummyVariable={setDummyVariable}
+          setUserLogInState={setUserLogInState}
         />
         <Footer />
       </Router>

@@ -2,13 +2,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 98vw;
+  width: 99vw;
   height: 10vh;
   background-color: #24303e;
 }
 
+.logo-link{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: inherit;
+  width: 30vw;
+  height: 10vh;
+}
+
+.unregistered-user, .registered-user{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  width: 30vw;
+  margin-right: 2.5vw;
+}
+
+.custom-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: initial;
+  margin-bottom: 0;
+}
+
 .nav-input {
-  width: 45vw;
+  width: 40vw;
   height: 3.5vh;
   border-radius: 5px;
   background-color: white;
@@ -17,9 +44,8 @@
 .nav-logo {
   color: azure;
   font-family: "Oi", cursive;
-  font-size: 3em;
+  font-size: 2.5em;
   text-decoration: "none";
-
   margin-left: 2.5%;
   cursor: pointer;
 }
@@ -35,4 +61,5 @@
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
+  font-family: 'Noto Serif KR', serif;
 }
