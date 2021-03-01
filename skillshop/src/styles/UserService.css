@@ -6,7 +6,7 @@
   width: 50vw;
   height: 15vh;
   background-color: azure;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.65);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.65);
 }
@@ -16,6 +16,7 @@
   flex-direction: column;
   width: 30vw;
   height: inherit;
+  margin: 0;
 }
 
 .buttons {

@@ -1,8 +1,10 @@
 import "./../styles/UserService.css";
 import firebase from "./../firebase/config.js";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 
 function UserService({userService, setDummyVariable}) {
+
+  const { url } = useRouteMatch();
 
   const deleteService = () => {
     console.log(userService.id)
@@ -27,7 +29,7 @@ function UserService({userService, setDummyVariable}) {
             <p><b>Data dodania: </b>{userService.date}</p>
         </div>
         <div class="buttons">
-          <Link className="custom-link" to="/">
+          <Link className="custom-link" to={`${url}/${userService.title}`}>
             <button className="btn blue">MODYFIKUJ</button>
           </Link>
           <Link className="custom-link" to="/">
