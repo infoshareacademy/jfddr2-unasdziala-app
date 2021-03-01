@@ -4,6 +4,7 @@ import Service from "./Service.js";
 import ServiceDetails from "./ServiceDetails";
 
 const ServicesList = ({ serviceList }) => {
+  console.log("lista renderowana:");
   return (
     <div className="service-list">
       <h1>LISTA DOSTĘPNYCH OFERT: </h1>

@@ -5,14 +5,15 @@ import { Switch, Route } from "react-router-dom";
 import ServicesList from "./ServicesList";
 import AddService from "./AddService.js";
 import LandingPage from "./LandingPage";
-import SignUpUser from "./SignUpUser"
-import SignInUser from "./SignInUser"
+import SignUpUser from "./SignUpUser";
+import SignInUser from "./SignInUser";
 
 import { categories } from "../helpers/categories";
 
 const Main = ({ setDummyVariable, serviceList, setUserLogInState }) => {
-
-  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState([]);
+  const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
+    []
+  );
 
   return (
     <div class="main">
@@ -28,17 +29,20 @@ const Main = ({ setDummyVariable, serviceList, setUserLogInState }) => {
             />
           </Route>
           <Route path="/sign-up-user">
-            <SignUpUser/>
+            <SignUpUser />
           </Route>
           <Route path="/sign-in-user">
-            <SignInUser setUserLogInState ={setUserLogInState} />
+            <SignInUser setUserLogInState={setUserLogInState} />
           </Route>
-          {categories.map(category =>{
-            return(
+          {categories.map((category) => {
+            return (
               <Route path={category.path}>
-                <ServicesList serviceList={servicesFilteredByCategory} />
+                <ServicesList
+                  serviceList={servicesFilteredByCategory}
+                  serviceList={serviceList}
+                />
               </Route>
-            )
+            );
           })}
           <Route path="/all-services">
             <ServicesList serviceList={serviceList} />
