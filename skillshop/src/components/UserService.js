@@ -1,6 +1,23 @@
-import "./../styles/UserService.css"
+import "./../styles/UserService.css";
+import firebase from "./../firebase/config.js";
+import { Link } from "react-router-dom";
 
-function UserService({userService}) {
+function UserService({userService, setDummyVariable}) {
+
+  const deleteService = () => {
+    console.log(userService.id)
+    firebase
+    .firestore()
+    .collection("services")
+    .doc(userService.id)
+    .delete()
+    .then(() => {
+        setDummyVariable(userService.id)
+        alert("Dokument został pomyślnie usunięty");
+      }).catch((error) => {
+        alert("Błąd podczas usuwania dokumentu: ", error);
+      });
+    }
 
   return (
     <div class="user-service">
@@ -10,8 +27,12 @@ function UserService({userService}) {
             <p><b>Data dodania: </b>{userService.date}</p>
         </div>
         <div class="buttons">
-            <button>MODYFIKUJ</button>
-            <button>USUŃ</button>
+          <Link className="custom-link" to="/">
+            <button className="btn blue">MODYFIKUJ</button>
+          </Link>
+          <Link className="custom-link" to="/">
+            <button className="btn red" onClick={deleteService}>USUŃ</button>
+          </Link>
         </div>
     </div>
   );

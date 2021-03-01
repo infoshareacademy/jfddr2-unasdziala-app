@@ -37,7 +37,7 @@ const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState
             <SignInUser setUserLogInState={setUserLogInState} />
           </Route>
           <Route path="/user-panel">
-            <UserPanel serviceList={serviceList} userLogInState={userLogInState}/>
+            <UserPanel serviceList={serviceList} userLogInState={userLogInState} setDummyVariable={setDummyVariable}/>
           </Route>
           {categories.map((category) => {
             return (
