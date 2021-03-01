@@ -1,3 +1,6 @@
+import { format } from 'date-fns'
+import { pl } from 'date-fns/locale';
+
 import "./../styles/AddService.css";
 import firebase from "./../firebase/config.js";
 import { useState, useEffect } from "react";
@@ -39,7 +42,7 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
       /*UWAGA! category nie zadziała jeśli dodatkowo jakieś inne pole nie zostanie zmienione. 
       Zastanowić się nad walidacją */
       category: category,
-      date: new Date(),
+      date: format(Date.parse(new Date()), "dd MMMM yyyy HH:mm:ss", { locale: pl }),
       user: userLogInState,
     });
   };
