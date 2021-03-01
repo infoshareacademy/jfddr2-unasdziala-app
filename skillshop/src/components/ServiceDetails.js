@@ -10,15 +10,17 @@ function ServiceDetails({ services }) {
 
   return (
     <div>
-      {/* <h3>{JSON.stringify(selectedService)}</h3> */}
-      <h3>{selectedService?.title}</h3>
-      <p>Opis usług:{selectedService?.description}</p>
-      <p>Lokalizacja:{selectedService?.city}</p>
-      <p>Cena usługi:{selectedService?.price} zł</p>
-      <p>
-        Kontakt:{selectedService?.phoneNumber},{selectedService?.fullName},
+      <div className="title">{selectedService?.title}</div>
+      <div className="details">
+        <p>Lokalizacja:&nbsp;&nbsp;{selectedService?.city}&nbsp;&nbsp;&nbsp;</p>
+        <p>Cena:&nbsp;&nbsp;{selectedService?.price}</p>
+      </div>
+      <p className="description">Opis:&nbsp;&nbsp;{selectedService?.detailDescritpion}</p>
+      <p className="contact">
+        Kontakt:&nbsp;&nbsp;{selectedService?.phoneNumber},&nbsp;&nbsp;{selectedService?.fullName},&nbsp;&nbsp;
         {selectedService?.email}
       </p>
+      <p>dodane:&nbsp;&nbsp;{selectedService?.date}</p>
       <Link to="/all-services">
         <button className="button-back">Powrót</button>
       </Link>

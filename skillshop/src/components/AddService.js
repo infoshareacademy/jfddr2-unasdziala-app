@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { categories } from "../helpers/categories";
 
-const AddService = ({ setDummyVariable, serviceList }) => {
+const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
 
   const [categoriesList, setCategoriesList] = useState([]);
 
@@ -39,12 +39,15 @@ const AddService = ({ setDummyVariable, serviceList }) => {
       /*UWAGA! category nie zadziała jeśli dodatkowo jakieś inne pole nie zostanie zmienione. 
       Zastanowić się nad walidacją */
       category: category,
+      date: new Date(),
+      user: userLogInState,
     });
   };
 
   const addServiceToDB = () => {
     firebase.firestore().collection("services").add(form);
     setDummyVariable(serviceList.length);
+    alert("Pomyślnie dodano ogłoszenie");
   };
 
   return (
@@ -69,9 +72,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
         {/* <input type="submit" value="Wyślij" /> */}
         <div className="service-container-input">
           <label>
-            Tytuł usługi:&nbsp;&nbsp;
+            {/* Tytuł usługi:&nbsp;&nbsp; */}
             <input
               type="text"
+              placeholder="Tytuł usługi"
               id="title"
               name="title"
               onChange={updateField}
@@ -79,9 +83,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             />
           </label>
           <label>
-            Imię i nazwisko:&nbsp;&nbsp;
+            {/* Imię i nazwisko:&nbsp;&nbsp; */}
             <input
               type="text"
+              placeholder="Imię i nazwisko"
               id="fullName"
               name="fullName"
               onChange={updateField}
@@ -89,9 +94,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             />
           </label>
           <label>
-            Adres email:&nbsp;&nbsp;
+            {/* Adres email:&nbsp;&nbsp; */}
             <input
               type="email"
+              placeholder="Adres email"
               id="email"
               name="email"
               onChange={updateField}
@@ -99,9 +105,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             />
           </label>
           <label>
-            Numer telefonu:&nbsp;&nbsp;
+            {/* Numer telefonu:&nbsp;&nbsp; */}
             <input
               type="tel"
+              placeholder="Numer telefonu"
               id="phoneNumber"
               name="phoneNumber"
               onChange={updateField}
@@ -109,9 +116,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             />
           </label>
           <label>
-            Adres:&nbsp;&nbsp;
+            {/* Adres:&nbsp;&nbsp; */}
             <input
               type="text"
+              placeholder="Adres"
               id="address"
               name="address"
               onChange={updateField}
@@ -119,9 +127,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             />
           </label>
           <label>
-            Miasto:&nbsp;&nbsp;
+            {/* Miasto:&nbsp;&nbsp; */}
             <input
               type="text"
+              placeholder="Miasto"
               id="city"
               name="city"
               onChange={updateField}
@@ -129,9 +138,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             />
           </label>
           <label>
-            Opis usługi:&nbsp;&nbsp;
+            {/* Opis usługi:&nbsp;&nbsp; */}
             <input
               type="text"
+              placeholder="Opis usługi"
               id="description"
               name="description"
               onChange={updateField}
@@ -139,9 +149,10 @@ const AddService = ({ setDummyVariable, serviceList }) => {
             />
           </label>
           <label>
-            Cena:&nbsp;&nbsp;
+            {/* Cena:&nbsp;&nbsp; */}
             <input
               type="text"
+              placeholder="Cena"
               id="price"
               name="price"
               onChange={updateField}

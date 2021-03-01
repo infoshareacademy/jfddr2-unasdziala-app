@@ -1,5 +1,5 @@
 .button-back {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-right: 2.5%;
   margin-bottom: 2.5%;
   background-color: #ff9900;
@@ -12,6 +12,35 @@
   padding: 6px 24px;
   text-decoration: none;
   font-size: 1.25em;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.75);
+}
+.title {
+  color: grey;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  line-height: 2.5;
+  font-size: 18px;
+}
+
+.details {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.contact {
+  font-weight: 400;
+}
+
+.description {
+  width: 90%;
 }

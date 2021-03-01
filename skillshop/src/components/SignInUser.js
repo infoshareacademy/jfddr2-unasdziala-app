@@ -24,7 +24,7 @@ const SignInUser = ({setUserLogInState }) => {
 		.signInWithEmailAndPassword(credentials.email, credentials.password)
 		.then((cred) => {
             console.log(cred);
-            setUserLogInState(true)
+            setUserLogInState(credentials.email)
 		})
 		.catch((reason) => {
 			alert(reason.message);

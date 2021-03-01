@@ -1,6 +1,9 @@
+* {
+  margin: 0;
+}
 .main {
   display: flex;
-  width: 98vw;
+  width: 100vw;
   height: 84vh;
   /*background-color: ##8e949b;*/
   font-family: "Oswald", sans-serif;

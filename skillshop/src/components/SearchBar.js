@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function SearchBar({ services, onFilter }) {
   const handleFilterServices = (value) => {
@@ -14,11 +15,16 @@ export default function SearchBar({ services, onFilter }) {
   };
 
   return (
-    <input
-      class="nav-input"
-      type="text"
-      placeholder="Znajdź usługę..."
-      onChange={(e) => handleFilterServices(e.target.value)}
-    />
+      <div>
+      <input
+        class="nav-input"
+        type="text"
+        placeholder="Znajdź usługę..."
+        onChange={(e) => handleFilterServices(e.target.value)}
+      />
+     <Link to="/all-services">
+        <button>&#127859;</button>
+      </Link>
+    </div>
   );
 }

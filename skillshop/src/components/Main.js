@@ -7,10 +7,11 @@ import AddService from "./AddService.js";
 import LandingPage from "./LandingPage";
 import SignUpUser from "./SignUpUser";
 import SignInUser from "./SignInUser";
+import UserPanel from "./UserPanel";
 
 import { categories } from "../helpers/categories";
 
-const Main = ({ setDummyVariable, serviceList, setUserLogInState }) => {
+const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState }) => {
   const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
     []
   );
@@ -26,13 +27,17 @@ const Main = ({ setDummyVariable, serviceList, setUserLogInState }) => {
             <AddService
               setDummyVariable={setDummyVariable}
               serviceList={servicesFilteredByCategory}
+              userLogInState={userLogInState}
             />
           </Route>
           <Route path="/sign-up-user">
-            <SignUpUser />
+            <SignUpUser serviceList={serviceList}/>
           </Route>
           <Route path="/sign-in-user">
             <SignInUser setUserLogInState={setUserLogInState} />
+          </Route>
+          <Route path="/user-panel">
+            <UserPanel serviceList={serviceList} userLogInState={userLogInState}/>
           </Route>
           {categories.map((category) => {
             return (

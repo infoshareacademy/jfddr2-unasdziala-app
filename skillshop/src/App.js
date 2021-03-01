@@ -7,12 +7,13 @@ import Navbar from "./components/Navbar.js";
 import Main from "./components/Main.js";
 import Footer from "./components/Footer.js";
 
+
 function App() {
   const [dummyVariable, setDummyVariable] = useState([]);
   const [serviceList, setServiceList] = useState([]);
   const [filteredServices, setFilteredServices] = useState([]);
 
-  const [userLogInState, setUserLogInState] = useState(false);
+  const [userLogInState, setUserLogInState] = useState("");
 
   useEffect(() => {
     setFilteredServices(serviceList);
@@ -48,6 +49,7 @@ function App() {
           setServiceList={setServiceList}
           setDummyVariable={setDummyVariable}
           setUserLogInState={setUserLogInState}
+          userLogInState={userLogInState}
         />
         <Footer />
       </Router>

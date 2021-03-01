@@ -5,7 +5,7 @@
   align-items: center;
   margin: 2%;
   min-height: 100%;
-  font-family: 'Noto Serif KR', serif;
+  font-family: "Noto Serif KR", serif;
 }
 
 .add-button {
@@ -38,9 +38,21 @@
 
 .service-container-input {
   display: flex;
+  box-sizing: border-box;
+  border: 3px solid #24303e;
   flex-direction: column;
-  
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Serif KR", serif;
 }
-input[type="text"]{
-  color: blue;
+.service-container-input input {
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-bottom: 1px solid #24303e;
+  width: 80%;
+  margin: 15px 0;
+  font-weight: 400;
+  font-size: 12px;
+  outline-style: none;
 }

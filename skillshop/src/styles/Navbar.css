@@ -1,13 +1,16 @@
+* {
+  margin: 0;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 99vw;
+  width: 100vw;
   height: 10vh;
   background-color: #24303e;
 }
 
-.logo-link{
+.logo-link {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -16,7 +19,8 @@
   height: 10vh;
 }
 
-.unregistered-user, .registered-user{
+.unregistered-user,
+.registered-user {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -26,7 +30,7 @@
   margin-right: 2.5vw;
 }
 
-.custom-link{
+.custom-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +43,7 @@
   height: 3.5vh;
   border-radius: 5px;
   background-color: white;
+  outline-style: none;
 }
 
 .nav-logo {
@@ -61,5 +66,5 @@
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
-  font-family: 'Noto Serif KR', serif;
+  font-family: "Noto Serif KR", serif;
 }

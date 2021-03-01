@@ -12,7 +12,7 @@ const Navbar = ({ services, onFilter, userLogInState, setUserLogInState  }) => {
   }
 
   const checkUserLogInState = () => {
-    if(userLogInState === false){
+    if(!userLogInState){
       return (
       <div className="unregistered-user">
         <Link className="custom-link" to="/sign-up-user">
@@ -23,13 +23,13 @@ const Navbar = ({ services, onFilter, userLogInState, setUserLogInState  }) => {
         </Link>      
       </div>      
       )
-    } else if(userLogInState === true) {
+    } else if(!!userLogInState) {
       return(
         <div className="registered-user">
           <Link className="custom-link" to="/addTask">
             <button className="nav-button">DODAJ<br></br>USŁUGĘ</button>
           </Link>
-          <Link className="custom-link" to="/">
+          <Link className="custom-link" to="/user-panel">
             <button class="nav-button">PANEL<br></br>UŻYTKOWNIKA</button>
           </Link>
           <Link className="custom-link" to="/">
@@ -47,27 +47,6 @@ const Navbar = ({ services, onFilter, userLogInState, setUserLogInState  }) => {
       </Link>
       <SearchBar services={services} onFilter={onFilter}/>
       {checkUserLogInState()}
-      
-      {/* <div className="unregistered-user">
-        <Link className="custom-link" to="/sign-up-user">
-          <button className="nav-button">REJESTRACJA</button>
-        </Link>
-        <Link className="custom-link" to="/sign-in-user">
-          <button className="nav-button">LOGOWANIE</button>
-        </Link>      
-      </div> */}
-
-      {/* <div className="registered-user">
-        <Link className="custom-link" to="/addTask">
-          <button className="nav-button">DODAJ<br></br>USŁUGĘ</button>
-        </Link>
-        <Link className="custom-link" to="/">
-          <button class="nav-button">PANEL<br></br>UŻYTKOWNIKA</button>
-        </Link>
-        <Link className="custom-link" to="/">
-          <button className="nav-button" onClick={logOut}>WYLOGUJ<br></br>UŻYTKOWNIKA</button>
-        </Link>    
-      </div> */}
     </div>
   );
 };
