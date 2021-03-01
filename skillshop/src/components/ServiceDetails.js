@@ -15,7 +15,7 @@ function ServiceDetails({ services }) {
         <p>Lokalizacja:&nbsp;&nbsp;{selectedService?.city}&nbsp;&nbsp;&nbsp;</p>
         <p>Cena:&nbsp;&nbsp;{selectedService?.price}</p>
       </div>
-      <p className="description">Opis:&nbsp;&nbsp;{selectedService?.detailDescritpion}</p>
+      <p className="description">Opis:&nbsp;&nbsp;{selectedService?.detailDescription}</p>
       <p className="contact">
         Kontakt:&nbsp;&nbsp;{selectedService?.phoneNumber},&nbsp;&nbsp;{selectedService?.fullName},&nbsp;&nbsp;
         {selectedService?.email}

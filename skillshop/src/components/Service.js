@@ -27,7 +27,7 @@ const Service = ({ service }) => {
           </div>
         </div>
       </div>
-      <Link to={`${url}/${service.title}`}>
+      <Link className="details" to={`${url}/${service.title}`}>
         <button className="service-button">SZCZEGÓŁY</button>
       </Link>
     </div>

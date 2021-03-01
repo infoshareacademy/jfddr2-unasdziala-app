@@ -32,6 +32,7 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
     city: "",
     address: "",
     description: "",
+    detailDescription: "",
     price: "",
   });
 
@@ -82,7 +83,6 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="title"
               name="title"
               onChange={updateField}
-              required
             />
           </label>
           <label>
@@ -93,7 +93,6 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="fullName"
               name="fullName"
               onChange={updateField}
-              required
             />
           </label>
           <label>
@@ -104,7 +103,6 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="email"
               name="email"
               onChange={updateField}
-              required
             />
           </label>
           <label>
@@ -115,7 +113,6 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="phoneNumber"
               name="phoneNumber"
               onChange={updateField}
-              required
             />
           </label>
           <label>
@@ -126,7 +123,6 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="address"
               name="address"
               onChange={updateField}
-              required
             />
           </label>
           <label>
@@ -137,7 +133,6 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="city"
               name="city"
               onChange={updateField}
-              required
             />
           </label>
           <label>
@@ -148,7 +143,6 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="description"
               name="description"
               onChange={updateField}
-              required
             />
           </label>
           <label>
@@ -159,9 +153,16 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
               id="price"
               name="price"
               onChange={updateField}
-              required
             />
           </label>
+          <textarea
+            placeholder="Szczegółowy opis Twojego ogłoszenia"
+            id="detailDescription"
+            name="detailDescription"
+            className="textarea"
+            onChange={updateField}
+          />
+       
         </div>
       </form>
       <div className="btn-container">

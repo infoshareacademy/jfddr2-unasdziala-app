@@ -50,7 +50,18 @@
   color: black;
   border: none;
   border-bottom: 1px solid #24303e;
-  width: 80%;
+  width: inherit;
+  margin: 15px 0;
+  font-weight: 400;
+  font-size: 12px;
+  outline-style: none;
+}
+.textarea {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #24303e;
+  width: inherit;
+  min-height: 10vh;
   margin: 15px 0;
   font-weight: 400;
   font-size: 12px;
