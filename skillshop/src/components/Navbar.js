@@ -3,7 +3,7 @@ import firebase from "./../firebase/config.js";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
-const Navbar = ({ services, onFilter, userLogInState, setUserLogInState  }) => {
+const Navbar = ({ serviceList, userLogInState, setUserLogInState, setSearchedServices  }) => {
 
   const logOut = () => {
     firebase.auth().signOut();
@@ -45,7 +45,7 @@ const Navbar = ({ services, onFilter, userLogInState, setUserLogInState  }) => {
       <Link className="logo-link" to="/">
         <div className="nav-logo">SkillShop</div>
       </Link>
-      <SearchBar services={services} onFilter={onFilter}/>
+      <SearchBar serviceList={serviceList} setSearchedServices={setSearchedServices}/>
       {checkUserLogInState()}
     </div>
   );

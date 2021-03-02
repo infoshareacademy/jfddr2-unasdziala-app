@@ -11,7 +11,7 @@ import UserPanel from "./UserPanel";
 
 import { categories } from "../helpers/categories";
 
-const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState }) => {
+const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState, searchedServices }) => {
   const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
     []
   );
@@ -46,6 +46,9 @@ const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState
               </Route>
             );
           })}
+          <Route path="/searched-services">
+            <ServicesList serviceList={searchedServices} />
+          </Route>
           <Route path="/all-services">
             <ServicesList serviceList={serviceList} />
           </Route>

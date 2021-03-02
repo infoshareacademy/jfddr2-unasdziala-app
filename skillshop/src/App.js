@@ -12,6 +12,7 @@ function App() {
   const [dummyVariable, setDummyVariable] = useState([]);
   const [serviceList, setServiceList] = useState([]);
   const [filteredServices, setFilteredServices] = useState([]);
+  const [searchedServices, setSearchedServices] = useState([]);
 
   const [userLogInState, setUserLogInState] = useState("");
 
@@ -39,10 +40,10 @@ function App() {
     <div class="main-container">
       <Router>
         <Navbar
-          services={serviceList}
-          onFilter={setFilteredServices}
+          serviceList={serviceList}
           userLogInState={userLogInState}
           setUserLogInState={setUserLogInState}
+          setSearchedServices={setSearchedServices}
         />
         <Main
           serviceList={filteredServices}
@@ -50,6 +51,7 @@ function App() {
           setDummyVariable={setDummyVariable}
           setUserLogInState={setUserLogInState}
           userLogInState={userLogInState}
+          searchedServices={searchedServices}
         />
         <Footer />
       </Router>
