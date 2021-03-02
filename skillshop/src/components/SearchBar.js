@@ -14,11 +14,25 @@ export default function SearchBar({ serviceList, setSearchedServices }) {
   const handleFilterServices = () => {
     const value = form;
     const filteredData = serviceList.filter((service) => {
-      return service.description.includes(value) ||
-        service.city.includes(value) ||
-        service.category.includes(value) ||
-        service.title.includes(value) ||
-        service.price.includes(value)
+      return (
+        service.description
+          .toLowerCase()
+          .trim()
+          .includes(value.toLowerCase().trim()) ||
+        service.city
+          .toLowerCase()
+          .trim()
+          .includes(value.toLowerCase().trim()) ||
+        service.category
+          .toLowerCase()
+          .trim()
+          .includes(value.toLowerCase().trim()) ||
+        service.title
+          .toLowerCase()
+          .trim()
+          .includes(value.toLowerCase().trim()) ||
+        service.price.toLowerCase().trim().includes(value.toLowerCase().trim())
+      );
     });
 
     setSearchedServices(filteredData);
