@@ -1,5 +1,5 @@
-// import { format } from 'date-fns'
-// import { pl } from 'date-fns/locale';
+import { format } from 'date-fns'
+import { pl } from 'date-fns/locale';
 
 import firebase from "./../firebase/config.js";
 import React from "react";
@@ -54,8 +54,10 @@ function ModifyService({userServiceList, userLogInState, setDummyVariable}) {
   }
 
   const modifyServiceInDB = () => {
+    const randomDate = format(Date.parse(new Date()), "dd MMMM yyyy HH:mm:ss", { locale: pl });
+    // console.log(randomDate);
     firebase.firestore().collection("services").doc(selectedService.id).update(form);
-    setDummyVariable(form);
+    setDummyVariable(randomDate);
     alert("Pomyślnie zmodyfikowano ogłoszenie");
   };
 
