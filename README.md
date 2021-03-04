@@ -50,7 +50,22 @@ Projekt SkillShop został utworzony przy pomocy biblioteki React (strona front-e
 ![](./screenshots/L5.png)
 
 <ins>4 Footer</ins> - Stopka strony aplikacji.<br/>
- 
-K
-k
-g
+
+## 2. Integracja z platformą FIREBASE
+
+Od strony back endu aplikacja SkillShop korzysta z funkcjonalności platformy Firebase. Zapewnia ona przede wszystkim możliwość przechowywania danych w Cloud FireStore oraz umożliwia zaimplementowanie mechanizmów rejestracji i autentykacji użytkowników.
+
+1. <ins>Autentykacja</ins> - Odbywa się na podtawie emaila i hasła podanych przez użytkowników.Odpowiednie mechanizmy są w całości obsługiwane przez FIREBASE i zapewniają bezpieczeństwo oraz zgodność z zasadami ochrony danych osobowych.
+
+2. </ins>Cloud Firestore</ins> i Usługa umożliwia tworzenie struktur danych zwanych "kolekcjami", zawierających pomniejsze obiekty zwane jako "dokumenty". Dla celów aplikacji SkillShop stworzono pojedynczą kolekcję o nazwie "Services". Każdy dokument kolekcji posiada następujące pola: <br/><br/>
+    
+    title: Tytuł ogłoszenia<br/>
+    category: Kategoria usług <br/>
+    fullName: Imię i nazwisko osoby dodającej ogłoszenie<br/>
+    email: adres email ww. osoby<br/>
+    phoneNumber: numer telefonu ww/ osoby<br/>
+    city: miasto w jakim świadczone są usługi<br/>
+    address: adres kontaktowy<br/>
+    description: krótki opis świadczonych usług<br/>
+    detailDescription: dokłądny opis świadczonych usług,<br/>
+    price: cena usług<br/>
