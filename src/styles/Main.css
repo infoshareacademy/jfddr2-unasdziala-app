@@ -28,3 +28,23 @@
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+@media only screen and (max-width: 1350px) {
+  .main-left,
+  .main-right {
+    width: 7vw;
+  }
+  .main-center {
+    width: 86vw;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .main-left,
+  .main-right {
+    width: 3vw;
+  }
+  .main-center {
+    width: 94vw;
+  }
+}

@@ -1,6 +1,15 @@
 .main-container {
+<<<<<<< HEAD
     /* main powinien być wyższy niż main-container? */
     height: 100vh;
     overflow: hidden;
     font-family: 'Share Tech', sans-serif;
 }
+=======
+  /* main powinien być wyższy niż main-container? */
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Share Tech", sans-serif;
+  padding: 0;
+}
+>>>>>>> response
