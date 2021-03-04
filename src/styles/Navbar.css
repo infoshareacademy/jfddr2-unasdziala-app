@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -35,7 +36,7 @@
   justify-content: center;
   align-items: center;
   height: initial;
-  margin-bottom: 0;
+  margin: 0 0.5vh 0 0.5vh;
 }
 
 .nav-logo {
@@ -59,4 +60,54 @@
   padding: 6px 24px;
   text-decoration: none;
   font-family: "Noto Serif KR", serif;
+}
+
+@media only screen and (max-width: 1430px) {
+  .logo-link {
+    font-size: 0.9em;
+    margin-right: 0;
+    width: 22vw;
+  }
+
+  .navbar {
+    justify-content: start;
+  }
+  .unregistered-user,
+  .registered-user {
+    padding-left: 1vh;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .logo-link {
+    font-size: 0.8em;
+  }
+  .unregistered-user,
+  .registered-user {
+    margin-left: 27px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .logo-link {
+    display: none;
+  }
+  .navbar {
+    justify-content: space-evenly;
+  }
+  .unregistered-user,
+  .registered-user {
+    margin-left: 0;
+    padding: 0;
+    width: 50vw;
+  }
+  .navbar {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .navbar {
+    flex-direction: column-reverse;
+  }
 }
