@@ -22,7 +22,7 @@ Projekt SkillShop został utworzony przy pomocy biblioteki React (strona front-e
 -----> ServiceDetails<br/>
 --> Footer<br/>
 
-![](./L1.png)
+![](./screenshots/L1.png)
 
 <ins>1 App</ins> -  Komponent root'owy, stanowiący kontener dla wszystkich pozostałych. Poza tym są w nim zdefiniowane wszystkie stany (patrz pkt 3) oraz odbywa się w nim pobieranie danych - listy usług przechowywanych za pomocą usługi Cloud Firestore (patrz pkt 2).<br/>
 
