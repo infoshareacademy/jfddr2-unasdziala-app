@@ -1,5 +1,5 @@
-import { format } from 'date-fns'
-import { pl } from 'date-fns/locale';
+import { format } from "date-fns";
+import { pl } from "date-fns/locale";
 
 import firebase from "./../firebase/config.js";
 import React from "react";
@@ -8,15 +8,14 @@ import { useParams, Link } from "react-router-dom";
 
 import { categories } from "../helpers/categories";
 
-function ModifyService({userServiceList, userLogInState, setDummyVariable}) {
-
+function ModifyService({ userServiceList, userLogInState, setDummyVariable }) {
   const [categoriesList, setCategoriesList] = useState([]);
 
   useEffect(() => {
     const categoriesArray = [];
     categories.forEach((category) => {
       categoriesArray.push(category.filter);
-    })
+    });
     setCategoriesList(categoriesArray);
   }, []);
 
@@ -51,20 +50,26 @@ function ModifyService({userServiceList, userLogInState, setDummyVariable}) {
       date: selectedService.date,
       user: userLogInState,
     });
-  }
+  };
 
   const modifyServiceInDB = () => {
-    const randomDate = format(Date.parse(new Date()), "dd MMMM yyyy HH:mm:ss", { locale: pl });
+    const randomDate = format(Date.parse(new Date()), "dd MMMM yyyy HH:mm:ss", {
+      locale: pl,
+    });
     // console.log(randomDate);
-    firebase.firestore().collection("services").doc(selectedService.id).update(form);
+    firebase
+      .firestore()
+      .collection("services")
+      .doc(selectedService.id)
+      .update(form);
     setDummyVariable(randomDate);
     alert("Pomyślnie zmodyfikowano ogłoszenie");
   };
 
   return (
-    <div >
-        <form>
-        <label>
+    <div className="add-service">
+      <form className="frame-addservice">
+        <label className="label-addservice">
           Wybierz typ usługi:&nbsp;&nbsp;
           <select
             defaultValue={selectedService.category}
@@ -179,16 +184,13 @@ function ModifyService({userServiceList, userLogInState, setDummyVariable}) {
         </div>
       </form>
       <div className="btn-container">
-        <Link to="/">
-          <button
-            className="add-button green"
-            onClick={modifyServiceInDB}
-          >
+        <Link className="custom-link" to="/">
+          <button className="add-button green" onClick={modifyServiceInDB}>
             MODYFIKUJ
           </button>
         </Link>
         &nbsp;
-        <Link to="/">
+        <Link className="custom-link" to="/">
           <button className="add-button red">ANULUJ</button>
         </Link>
       </div>

@@ -1,6 +1,8 @@
 * {
   margin: 0;
+  font-family: "Noto Serif KR", serif;
 }
+
 .main {
   display: flex;
   width: 100vw;
@@ -22,11 +24,13 @@
 
 .main-center {
   width: 70vw;
-  height: 84vh;
+  height: 85vh;
   background-color: #f2f2f2;
   height: auto;
   overflow-x: hidden;
   overflow-y: scroll;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width: 1350px) {
