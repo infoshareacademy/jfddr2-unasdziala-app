@@ -57,7 +57,7 @@ Od strony back endu aplikacja SkillShop korzysta z funkcjonalności platformy Fi
 
 1. <ins>Autentykacja</ins> - Odbywa się na podtawie emaila i hasła podanych przez użytkowników.Odpowiednie mechanizmy są w całości obsługiwane przez FIREBASE i zapewniają bezpieczeństwo oraz zgodność z zasadami ochrony danych osobowych.
 
-2. </ins>Cloud Firestore</ins> i Usługa umożliwia tworzenie struktur danych zwanych "kolekcjami", zawierających pomniejsze obiekty zwane jako "dokumenty". Dla celów aplikacji SkillShop stworzono pojedynczą kolekcję o nazwie "Services". Każdy dokument kolekcji posiada następujące pola: <br/><br/>
+2. </ins>Cloud Firestore</ins> to usługa umożliwia tworzenie struktur danych zwanych "kolekcjami", zawierających pomniejsze obiekty zwane jako "dokumenty". Dla celów aplikacji SkillShop stworzono pojedynczą kolekcję o nazwie "Services". Każdy dokument kolekcji posiada następujące pola: <br/><br/>
     
     title: Tytuł ogłoszenia<br/>
     category: Kategoria usług <br/>
