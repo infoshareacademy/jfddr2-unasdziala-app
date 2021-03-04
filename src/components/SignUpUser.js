@@ -33,6 +33,8 @@ const SignUpUser = () => {
 
   return (
     <div className="sign-up-user">
+      <h1>Rejestracja</h1>
+      <br/>
       <form className="credentials">
         <label>
           Email:&nbsp;&nbsp;
@@ -58,12 +60,12 @@ const SignUpUser = () => {
       </form>
       &nbsp;
       <div className="btn-container">
-        <Link to="/">
+        <Link className="custom-link" to="/">
           <button className="add-button green" onClick={signUpUser}>
             REJESTRACJA
           </button>
         </Link>
-        <Link to="/">
+        <Link className="custom-link" to="/">
           <button className="add-button red">ANULUJ</button>
         </Link>
       </div>

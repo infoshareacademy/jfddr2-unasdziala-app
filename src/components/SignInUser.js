@@ -32,6 +32,8 @@ const SignInUser = ({ setUserLogInState }) => {
 
   return (
     <div className="sign-up-user">
+      <h1>Logowanie</h1>
+      <br/>
       <form className="credentials">
         <label>
           Email:&nbsp;&nbsp;
@@ -57,12 +59,12 @@ const SignInUser = ({ setUserLogInState }) => {
       </form>
       &nbsp;
       <div className="btn-container">
-        <Link to="/">
+        <Link className="custom-link" to="/">
           <button className="add-button green" onClick={signInUser}>
             LOGOWANIE
           </button>
         </Link>
-        <Link to="/">
+        <Link className="custom-link"  to="/">
           <button className="add-button red">ANULUJ</button>
         </Link>
       </div>

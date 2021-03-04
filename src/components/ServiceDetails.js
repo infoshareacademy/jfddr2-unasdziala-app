@@ -16,7 +16,7 @@ function ServiceDetails({ services, userLogInState }) {
           &nbsp; Musisz być zalogowany aby widzieć dane kontaktowe
         </p>
         <p className="email" style={{color: "blue"}}>
-         <Link className="custom-link" to="/sign-up-user">Logowanie</Link> <Link className="custom-link" to="/sign-in-user">Rejestracja</Link>
+         <Link className="custom-link" to="/sign-in-user">Logowanie</Link> &nbsp; <Link className="custom-link" to="/sign-up-user">Rejestracja</Link>
         </p>
       </div>
       )

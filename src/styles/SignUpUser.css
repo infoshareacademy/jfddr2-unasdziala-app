@@ -10,11 +10,23 @@
 .credentials {
   display: flex;
   flex-direction: column;
+  min-width: 15vw;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 15vw;
+}
+
+.custom-link {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: initial;
 }
 
 .add-button {
@@ -30,8 +42,8 @@
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
-  min-width: 7.5vw;
-  min-height: 5vh;
+  min-width: 6vw;
+  min-height: 4vh;
 }
 .green {
   background-color: #5cb85c;

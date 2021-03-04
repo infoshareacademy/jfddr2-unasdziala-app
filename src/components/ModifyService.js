@@ -58,11 +58,10 @@ function ModifyService({userServiceList, userLogInState, setDummyVariable}) {
     // console.log(randomDate);
     firebase.firestore().collection("services").doc(selectedService.id).update(form);
     setDummyVariable(randomDate);
-    
     setTimeout(()=>{
+      alert("Pomyślnie zmodyfikowano ogłoszenie. Prosimy o ponowne zalogowanie do systemu.");
       window.location.reload(true);
     }, 500)
-    alert("Pomyślnie zmodyfikowano ogłoszenie. Prosimy o ponowne zalogowanie do systemu.");
   };
 
   return (
