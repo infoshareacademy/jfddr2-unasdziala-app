@@ -25,18 +25,11 @@
 }
 
 .search-btn {
-<<<<<<< HEAD
-  margin-left: 1px;
-=======
   margin: 0 1px 0 1px;
->>>>>>> response
   height: 4vh;
   width: 4vh;
   border-radius: 25%;
   cursor: pointer;
-<<<<<<< HEAD
-  outline: none;
-=======
   overflow: auto;
 }
 
@@ -50,5 +43,4 @@
   .nav-input {
     width: 375px;
   }
->>>>>>> response
 }
