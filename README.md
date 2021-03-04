@@ -31,9 +31,15 @@ Projekt SkillShop został utworzony przy pomocy biblioteki React (strona front-e
 <ins>2.3 UserPanel</ins> - Wyświetla te usługi które zostały dodane przez zalogowanego obecnie użytkownika. Są one filtrowane na podstawie pola "user" w dokumentach kolekcji. <br/>
 <ins>2.3.1 UserService</ins> - Komponent umożliwiający modyfikacje lub usunięcie usługi dodanej przez zalogowanego użytkownika. Zawiera dwa przyciski. Po naciśnięciu przycisku "modyfikuj" renderowany jest komponent "ModifyService". Po naciśnięciu przycisku "usuń" wykonywana jest metoda "delete" usuwająca service z kolekcji na Firebase. <br/>
 <ins>2.3.1.1 ModifyService</ins> - Komponent w wyglądzie i działaniu podobny do AddService (w istocie wykorzystujący te same klasy CSS). Jedyna znacząca różnica polega na tym, że po naciśnięciu przycisku wykonywnana jest metoda "update" (zamiast "add"), która modyfikuje istniejące pola dokumentu w Firestore. <br/>
+
 <ins>3. Main</ins> - Komponent, w którym wyświetlana jest większość informacji na stronie. Służy w istocie za kontener dla komponentów LandingPage i ServiceList. Zawiera również znacznik Switch, zawierający route'y dla ww. komponentów. <br/>
+
 <ins>3.1 LandingPage</ins> - Stanowi niejako "stronę startową". Składają się na niego "kafelki", umożliwające po naciśnięciu przeniesienie do komponentu ServiceList z listą usług wyfiltrowaną na podstawie odpowiedniej kategorii. <br/>
-<ins>3.2 ServiceList</ins> -
+
+<ins>3.2 ServiceList</ins> - Podobnie jak "UserPanel" wyświetla listę usług na podstawie kolekcji Services. Jest widoczny również dla niezalogowanych użytkowników. Usługi mogą zostać wyświetlone wszysktie (bez żadnych filtrów), wyfiltrowane na podstawie kategorii lub na podstawie wartości wpisanej w input komponentu SearchBar.
+<ins>3.2.1 Service</ins> - Komponent zawierający podstawowe informacje dot. danej usługi. Zawiera button "Szczegóły" odsyłający do komponentu ServiceDetails.
+<ins>3.2.1.1 ServiceDetails</ins> Komponent zawierający szczegółowe informacje dot. danej usługi. Zalogowanym użytkownikom umożliwia wyświetlenie danych kontaktowych do osoby, która umieściła ofertę w aplikacji. Niezalogowanych odsyła do okien rejestracji lub logowania.
+<ins>4 Footer</ins> Stopka strony aplikacji.
  
 K
 k
