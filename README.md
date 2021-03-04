@@ -47,6 +47,8 @@ Projekt SkillShop został utworzony przy pomocy biblioteki React (strona front-e
 <ins>3.2.1 Service</ins> - Komponent zawierający podstawowe informacje dot. danej usługi. Zawiera button "Szczegóły" odsyłający do komponentu ServiceDetails.<br/>
 <ins>3.2.1.1 ServiceDetails</ins> Komponent zawierający szczegółowe informacje dot. danej usługi. Zalogowanym użytkownikom umożliwia wyświetlenie danych kontaktowych do osoby, która umieściła ofertę w aplikacji. Niezalogowanych odsyła do okien rejestracji lub logowania.<br/>
 
+![](./screenshots/L5.png)
+
 <ins>4 Footer</ins> - Stopka strony aplikacji.<br/>
  
 K
