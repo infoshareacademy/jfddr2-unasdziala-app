@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 2%;
+  margin: 0;
   min-height: 100%;
   font-family: "Noto Serif KR", serif;
 }
@@ -25,8 +25,13 @@
   min-height: 5vh;
 }
 
+.frame-addservice {
+  border: 3px solid #24303e;
+  margin-top: 1em;
+}
 .btn-container {
   display: flex;
+  margin-bottom: 1em;
 }
 
 .green {
@@ -40,7 +45,6 @@
 .service-container-input {
   display: flex;
   box-sizing: border-box;
-  border: 3px solid #24303e;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -51,10 +55,10 @@
   color: black;
   border: none;
   border-bottom: 1px solid #24303e;
-  width: inherit;
+  width: 15em;
   margin: 15px 0;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 15px;
   outline-style: none;
 }
 .textarea {
@@ -65,6 +69,17 @@
   min-height: 10vh;
   margin: 15px 0;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 15px;
   outline-style: none;
 }
+
+.custom-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: initial;
+  /* margin: 0 0.5vh 0 0.5vh; */
+}
+/* .label-addservice {
+  margin-top: 1em;
+} */

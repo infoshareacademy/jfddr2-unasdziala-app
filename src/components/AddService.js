@@ -1,5 +1,5 @@
-import { format } from 'date-fns'
-import { pl } from 'date-fns/locale';
+import { format } from "date-fns";
+import { pl } from "date-fns/locale";
 
 import "./../styles/AddService.css";
 import firebase from "./../firebase/config.js";
@@ -9,14 +9,13 @@ import { Link } from "react-router-dom";
 import { categories } from "../helpers/categories";
 
 const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
-
   const [categoriesList, setCategoriesList] = useState([]);
 
   useEffect(() => {
     const categoriesArray = [];
     categories.forEach((category) => {
       categoriesArray.push(category.filter);
-    })
+    });
     setCategoriesList(categoriesArray);
   }, []);
 
@@ -43,7 +42,9 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
       /*UWAGA! category nie zadziała jeśli dodatkowo jakieś inne pole nie zostanie zmienione. 
       Zastanowić się nad walidacją */
       category: category,
-      date: format(Date.parse(new Date()), "dd MMMM yyyy HH:mm:ss", { locale: pl }),
+      date: format(Date.parse(new Date()), "dd MMMM yyyy HH:mm:ss", {
+        locale: pl,
+      }),
       user: userLogInState,
     });
   };
@@ -56,8 +57,8 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
 
   return (
     <div className="add-service">
-      <form>
-        <label>
+      <form className="frame-addservice">
+        <label className="label-addservice">
           Wybierz typ usługi:&nbsp;&nbsp;
           <select
             value={category}
@@ -162,11 +163,10 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
             className="textarea"
             onChange={updateField}
           />
-       
         </div>
       </form>
       <div className="btn-container">
-        <Link to="/">
+        <Link className="custom-link" to="/">
           <button
             className="add-button green"
             onClick={addServiceToDB}
@@ -176,7 +176,7 @@ const AddService = ({ setDummyVariable, serviceList, userLogInState }) => {
           </button>
         </Link>
         &nbsp;
-        <Link to="/">
+        <Link className="custom-link" to="/">
           <button className="add-button red">ANULUJ</button>
         </Link>
       </div>
