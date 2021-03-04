@@ -52,15 +52,15 @@ const Main = ({
           {categories.map((category) => {
             return (
               <Route path={category.path}>
-                <ServicesList serviceList={servicesFilteredByCategory} />
+                <ServicesList serviceList={servicesFilteredByCategory} userLogInState={userLogInState}/>
               </Route>
             );
           })}
           <Route path="/searched-services">
-            <ServicesList serviceList={searchedServices} />
+            <ServicesList serviceList={searchedServices} userLogInState={userLogInState}/>
           </Route>
           <Route path="/all-services">
-            <ServicesList serviceList={serviceList} />
+            <ServicesList serviceList={serviceList} userLogInState={userLogInState}/>
           </Route>
           <Route path="/">
             <LandingPage

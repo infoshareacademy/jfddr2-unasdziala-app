@@ -2,11 +2,40 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import "../styles/ServiceDetails.css";
 
-function ServiceDetails({ services }) {
+function ServiceDetails({ services, userLogInState }) {
   const { serviceTitle } = useParams();
   const selectedService = services.find(
     (service) => service.title === serviceTitle
   );
+
+  const showContact = () =>{
+    if(!userLogInState){
+      return(
+      <div className="second-info">
+        <p className="contact">
+          &nbsp; Musisz być zalogowany aby widzieć dane kontaktowe
+        </p>
+        <p className="email" style={{color: "blue"}}>
+         <Link className="custom-link" to="/sign-up-user">Logowanie</Link> <Link className="custom-link" to="/sign-in-user">Rejestracja</Link>
+        </p>
+      </div>
+      )
+    } else if(!!userLogInState){
+      return(
+      <div className="second-info">
+        <p className="contact">
+          <i class="lni lni-phone"></i>
+          {selectedService?.phoneNumber},&nbsp;&nbsp;
+          {selectedService?.fullName}
+        </p>
+        <p className="email">
+          <i class="lni lni-envelope"></i>
+          {selectedService?.email}
+        </p>
+      </div>
+      )
+    }
+  }
 
   return (
     <div className="details">
@@ -23,7 +52,9 @@ function ServiceDetails({ services }) {
               {selectedService?.price}
             </p>
           </div>
-          <div className="second-info">
+
+          {showContact()}
+          {/* <div className="second-info">
             <p className="contact">
               <i class="lni lni-phone"></i>
               {selectedService?.phoneNumber},&nbsp;&nbsp;
@@ -33,7 +64,10 @@ function ServiceDetails({ services }) {
               <i class="lni lni-envelope"></i>
               {selectedService?.email}
             </p>
-          </div>
+          </div> */}
+
+
+
         </div>
         <p className="description">
           Opis:&nbsp;&nbsp;{selectedService?.detailDescription}

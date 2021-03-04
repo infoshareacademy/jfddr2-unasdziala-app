@@ -3,7 +3,7 @@ import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
 import Service from "./Service.js";
 import ServiceDetails from "./ServiceDetails.js";
 
-const ServicesList = ({ serviceList }) => {
+const ServicesList = ({ serviceList, userLogInState }) => {
   const { path } = useRouteMatch();
 
   return (
@@ -19,7 +19,10 @@ const ServicesList = ({ serviceList }) => {
           </Link>
         </Route>
         <Route path={`${path}/:serviceTitle`}>
-          <ServiceDetails services={serviceList} />
+          <ServiceDetails 
+          services={serviceList} 
+          userLogInState={userLogInState}
+          />
         </Route>
       </Switch>
     </div>

@@ -1,6 +1,19 @@
 .details {
   width: 48vw;
 }
+
+.custom-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: initial;
+  max-width: initial;
+}
+
+.email{
+  display: flex;
+}
+
 .title {
   color: grey;
   margin-top: 2%;
