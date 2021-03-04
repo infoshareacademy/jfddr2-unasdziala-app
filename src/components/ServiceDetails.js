@@ -9,18 +9,37 @@ function ServiceDetails({ services }) {
   );
 
   return (
-    <div>
+    <div className="details">
       <div className="title">{selectedService?.title}</div>
-      <div className="details">
-        <p>Lokalizacja:&nbsp;&nbsp;{selectedService?.city}&nbsp;&nbsp;&nbsp;</p>
-        <p>Cena:&nbsp;&nbsp;{selectedService?.price}</p>
+      <div className="info">
+        <div className="info-box">
+          <div className="first-info">
+            <p className="location">
+              <i class="lni lni-home"></i>
+              {selectedService?.city}
+            </p>
+            <p className="price">
+              <i class="lni lni-wallet"></i>
+              {selectedService?.price}
+            </p>
+          </div>
+          <div className="second-info">
+            <p className="contact">
+              <i class="lni lni-phone"></i>
+              {selectedService?.phoneNumber},&nbsp;&nbsp;
+              {selectedService?.fullName}
+            </p>
+            <p className="email">
+              <i class="lni lni-envelope"></i>
+              {selectedService?.email}
+            </p>
+          </div>
+        </div>
+        <p className="description">
+          Opis:&nbsp;&nbsp;{selectedService?.detailDescription}
+        </p>
+        <p className="date">dodane:&nbsp;&nbsp;{selectedService?.date}</p>
       </div>
-      <p className="description">Opis:&nbsp;&nbsp;{selectedService?.detailDescription}</p>
-      <p className="contact">
-        Kontakt:&nbsp;&nbsp;{selectedService?.phoneNumber},&nbsp;&nbsp;{selectedService?.fullName},&nbsp;&nbsp;
-        {selectedService?.email}
-      </p>
-      <p>dodane:&nbsp;&nbsp;{selectedService?.date}</p>
       <Link to="/all-services">
         <button className="button-back">Powrót</button>
       </Link>

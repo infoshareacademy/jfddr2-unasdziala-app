@@ -1,4 +1,3 @@
-
 import "./../styles/Service.css";
 import { Link, useRouteMatch } from "react-router-dom";
 
@@ -7,12 +6,12 @@ const Service = ({ service }) => {
 
   return (
     <div className="service">
-      <div class="informations">
-        <div class="header">
+      <div className="informations">
+        <div className="header">
           <h1>{service.title}</h1>
           <div>{service.description}</div>
         </div>
-        <div class="data">
+        <div className="data">
           <div>
             <b>Kategoria usług: </b>
             {service.category}
