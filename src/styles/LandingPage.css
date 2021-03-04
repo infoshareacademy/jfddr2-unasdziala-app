@@ -1,0 +1,59 @@
+.container {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 98%;
+  overflow: hidden;
+}
+
+.container-wrap {
+  width: 82.5vh;
+  height: 62.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+a {
+  width: 20vh;
+  height: 20vh;
+}
+
+.box,
+.box1 {
+  display: flex;
+  background-color: #24303e;
+  width: 20vh;
+  height: 20vh;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  /* margin: 2.5vh; */
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover,
+.box1:hover {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
+}
+
+.box:active,
+.box1:active {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+.box1 {
+  background-color: #ff9900;
+  color: white;
+}

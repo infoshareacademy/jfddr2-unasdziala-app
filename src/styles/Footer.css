@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  width: 100vw;
+  height: 6vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #24303e;
+  color: #f2f2f2;
+  font-size: 12px;
+  font-family: "Noto Sans JP", sans-serif;
+}

@@ -1,0 +1,29 @@
+.service-list {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.list-button {
+  margin-top: 10%;
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+  background-color: #ff9900;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #f2f2f2;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  font-size: 1.25em;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.75);
+}

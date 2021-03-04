@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  font-family: "Noto Serif KR", serif;
+}
+
+.main {
+  display: flex;
+  width: 100vw;
+  height: 84vh;
+  /*background-color: ##8e949b;*/
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  overflow: hidden;
+}
+
+.main-left,
+.main-right {
+  display: flex;
+  width: 15vw;
+  height: 85vh;
+  color: black;
+  background-color: #f2f2f2;
+}
+
+.main-center {
+  width: 70vw;
+  height: 85vh;
+  background-color: #f2f2f2;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1350px) {
+  .main-left,
+  .main-right {
+    width: 7vw;
+  }
+  .main-center {
+    width: 86vw;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .main-left,
+  .main-right {
+    width: 3vw;
+  }
+  .main-center {
+    width: 94vw;
+  }
+}
