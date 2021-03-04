@@ -1,7 +1,7 @@
 import "./../styles/ServiceList.css";
 import { Link, useRouteMatch, Switch, Route } from "react-router-dom";
 import Service from "./Service.js";
-import ServiceDetails from "./ServiceDetails";
+import ServiceDetails from "./ServiceDetails.js";
 
 const ServicesList = ({ serviceList }) => {
   const { path } = useRouteMatch();

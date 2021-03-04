@@ -50,6 +50,7 @@
 .nav-button {
   margin-right: 2.5%;
   background-color: #ff9900;
+  outline: none;
   border-radius: 5px;
   border: none;
   display: inline-block;

@@ -11,17 +11,23 @@ import UserPanel from "./UserPanel";
 
 import { categories } from "../helpers/categories";
 
-const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState, searchedServices }) => {
+const Main = ({
+  setDummyVariable,
+  serviceList,
+  userLogInState,
+  setUserLogInState,
+  searchedServices,
+}) => {
   const [servicesFilteredByCategory, setServicesFilteredByCategory] = useState(
     []
   );
 
   return (
-    <div class="main">
-      <div class="main-left">
+    <div className="main">
+      <div className="main-left">
         {/* przestrzeń do wykorzystania w późniejszych wersjach projektu */}
       </div>
-      <div class="main-center">
+      <div className="main-center">
         <Switch>
           <Route path="/addTask">
             <AddService
@@ -31,13 +37,17 @@ const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState
             />
           </Route>
           <Route path="/sign-up-user">
-            <SignUpUser serviceList={serviceList}/>
+            <SignUpUser serviceList={serviceList} />
           </Route>
           <Route path="/sign-in-user">
             <SignInUser setUserLogInState={setUserLogInState} />
           </Route>
           <Route path="/user-panel">
-            <UserPanel serviceList={serviceList} userLogInState={userLogInState} setDummyVariable={setDummyVariable}/>
+            <UserPanel
+              serviceList={serviceList}
+              userLogInState={userLogInState}
+              setDummyVariable={setDummyVariable}
+            />
           </Route>
           {categories.map((category) => {
             return (
@@ -60,7 +70,7 @@ const Main = ({ setDummyVariable, serviceList, userLogInState, setUserLogInState
           </Route>
         </Switch>
       </div>
-      <div class="main-right">
+      <div className="main-right">
         {/* przestrzeń do wykorzystania w późniejszych wersjach projektu */}
       </div>
     </div>

@@ -2,7 +2,7 @@ import "./../styles/Footer.css";
 
 const Footer = () => {
   return (
-    <div class="footer">
+    <div className="footer">
       <p>2021 &#169; U nas działa Inc.</p>
     </div>
   );
