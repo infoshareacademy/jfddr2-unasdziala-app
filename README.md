@@ -5,11 +5,31 @@ SkillShop jest aplikacją stworzoną by umożliwić wykwalifikowanym specjalisto
 ## 1. Struktura aplikacji
 
 Projekt SkillShop został utworzony przy pomocy biblioteki React (strona front-endowa) oraz platformy Firebase (strona back-endowa). Na aplikację składają się poniższe komponenty:
+-> App
+
+--> Navbar
+
+--->SearchBar
+---> SignUpUser
+---> SignIn User
+---> AddService
+---> UserPanel
+----> UserService
+-----> ModifyService
+
+--> Main
+---> LandingPage
+---> ServiceList
+----> Service
+-----> ServiceDetails
+
+--> Footer
+
 
 -> App -  Komponent root'owy, stanowiący kontener dla wszystkich pozostałych. Poza tym są w nim zdefiniowane wszystkie stany (patrz pkt 3) oraz odbywa się w nim pobieranie danych - listy usług przechowywanych za pomocą usługi Cloud Firestore (patrz pkt 2).
 --> Navbar - Komponent nagłówka. Zawiera logo (stanowiące również odnośnik, który po kliknięciu przenosi użytkownika do strony startowej aplikacji) oraz przyciski, które po naciśnięciu umożliwiają poruszanie się po głębiej zagęszczonych komponentach aplikacji. Przed zalogowaniem się użytkownik widzi przyciski "Rejestracja" oraz "Logowanie". Tak jak ich nazwy wskazują odsyłają one komponentów umożliwających założenie konta lub autentykację osoby korzystających ze SkillShop. Po zalogowaniu się przyciski "Rejestracja" oraz "Logowanie" znikają, a pojawiają się kolejne: "Dodaj usługę", "Panel Użytkownika" oraz "Wyloguj użytkownika". Ich działanie zostanie opisane poniżej.
 
---> AddService - Komponent zostaje wyrenderowany po naciśnięciu przycisku "
+--> AddService - Komponent zostaje wyrenderowany po naciśnięciu przycisku "Dodaj usługę".
 
 
 ### `npm start`
