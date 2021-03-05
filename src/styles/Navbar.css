@@ -18,7 +18,9 @@
   height: inherit;
   width: 30vw;
   height: 10vh;
+  text-decoration: none;
 }
+
 
 .unregistered-user,
 .registered-user {

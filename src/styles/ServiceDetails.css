@@ -10,9 +10,20 @@
   max-width: initial;
 }
 
+.date {
+  font-size: 13px;
+  width: 200px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  text-align: center;
+  color: #24303e;
+}
+
 .email{
   display: flex;
   justify-content: space-evenly;
+  width: inherit;
 }
 
 .title {
@@ -57,4 +68,13 @@
 
 .location .contact {
   margin-bottom: 15px;
+}
+
+.second-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+svg {
+  padding-top: 5px;
 }

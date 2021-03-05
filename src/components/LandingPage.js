@@ -27,7 +27,7 @@ const LandingPage = ({ serviceList, setServicesFilteredByCategory }) => {
           </Link>
         )
       })}
-      <Link className="link" exact activeClassName="active" to="/all-services">
+      <Link exact activeClassName="active" to="/all-services">
         <div className="box1">Wszystkie</div>
       </Link>
     </div>

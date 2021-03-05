@@ -1,5 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { BsFillEnvelopeFill, BsGeoAlt, BsFillPersonFill } from "react-icons/bs";
 import "../styles/ServiceDetails.css";
 
 function ServiceDetails({ services, userLogInState }) {
@@ -11,7 +13,7 @@ function ServiceDetails({ services, userLogInState }) {
   const showContact = () =>{
     if(!userLogInState){
       return(
-      <div className="second-info">
+      <div>
         <p className="contact">
           &nbsp; Musisz być zalogowany aby widzieć dane kontaktowe
         </p>
@@ -24,12 +26,14 @@ function ServiceDetails({ services, userLogInState }) {
       return(
       <div className="second-info">
         <p className="contact">
-          <i class="lni lni-phone"></i>
+        <BsFillPersonFill color="#24303e" size="1em" />
+            &nbsp;
           {selectedService?.phoneNumber},&nbsp;&nbsp;
           {selectedService?.fullName}
         </p>
         <p className="email">
-          <i class="lni lni-envelope"></i>
+        <BsFillEnvelopeFill color="#ff9900" size="1em" />
+            &nbsp;
           {selectedService?.email}
         </p>
       </div>
@@ -44,11 +48,13 @@ function ServiceDetails({ services, userLogInState }) {
         <div className="info-box">
           <div className="first-info">
             <p className="location">
-              <i class="lni lni-home"></i>
+            <BsGeoAlt color="#24303e" size="1em" />
+              &nbsp;
               {selectedService?.city}
             </p>
             <p className="price">
-              <i class="lni lni-wallet"></i>
+            <RiMoneyDollarCircleFill color="#ff9900" size="1em" />
+              &nbsp;
               {selectedService?.price}
             </p>
           </div>
