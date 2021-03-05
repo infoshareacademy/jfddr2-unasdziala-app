@@ -71,6 +71,8 @@ Od strony back endu aplikacja SkillShop korzysta z funkcjonalności platformy Fi
     description: krótki opis świadczonych usług<br/>
     detailDescription: dokłądny opis świadczonych usług,<br/>
     price: cena usług<br/>
+    user: pole wskazujące na użytkownika, który dodał service<br/>
+    date: data dodania service'u<br/>
 
 ## 3. Autorzy
 
