@@ -61,12 +61,10 @@ function ModifyService({ userServiceList, userLogInState, setDummyVariable }) {
       .firestore()
       .collection("services")
       .doc(selectedService.id)
-      .update(form);
-    setDummyVariable(randomDate);
-    setTimeout(()=>{
-      alert("Pomyślnie zmodyfikowano ogłoszenie. Prosimy o ponowne zalogowanie do systemu.");
-      window.location.reload(true);
-    }, 500)
+      .update(form).then(() =>{
+        setDummyVariable(randomDate);
+        alert("Pomyślnie zmodyfikowano ogłoszenie.")
+      })
   };
 
   return (
