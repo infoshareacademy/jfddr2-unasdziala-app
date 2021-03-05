@@ -1,7 +1,7 @@
 import "./styles/MainContainer.css";
 
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import firebase from "./firebase/config.js";
 import Navbar from "./components/Navbar.js";
 import Main from "./components/Main.js";
