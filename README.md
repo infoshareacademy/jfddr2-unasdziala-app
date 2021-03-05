@@ -75,3 +75,4 @@ Od strony back endu aplikacja SkillShop korzysta z funkcjonalności platformy Fi
 ## 3. Autorzy
 
 [Maciej Paluszyński](https://github.com/MPaluszynski)
+[Bartosz Leśniewski](https://github.com/bartosz-lesniewski)
