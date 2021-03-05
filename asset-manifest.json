@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/jfddr2-unasdziala-app/static/css/main.a47c8893.chunk.css",
-    "main.js": "/jfddr2-unasdziala-app/static/js/main.281a956a.chunk.js",
-    "main.js.map": "/jfddr2-unasdziala-app/static/js/main.281a956a.chunk.js.map",
+    "main.css": "/jfddr2-unasdziala-app/static/css/main.c63b6fa2.chunk.css",
+    "main.js": "/jfddr2-unasdziala-app/static/js/main.258597a7.chunk.js",
+    "main.js.map": "/jfddr2-unasdziala-app/static/js/main.258597a7.chunk.js.map",
     "runtime-main.js": "/jfddr2-unasdziala-app/static/js/runtime-main.5d5734f4.js",
     "runtime-main.js.map": "/jfddr2-unasdziala-app/static/js/runtime-main.5d5734f4.js.map",
-    "static/js/2.c2900fc8.chunk.js": "/jfddr2-unasdziala-app/static/js/2.c2900fc8.chunk.js",
-    "static/js/2.c2900fc8.chunk.js.map": "/jfddr2-unasdziala-app/static/js/2.c2900fc8.chunk.js.map",
+    "static/js/2.459c7868.chunk.js": "/jfddr2-unasdziala-app/static/js/2.459c7868.chunk.js",
+    "static/js/2.459c7868.chunk.js.map": "/jfddr2-unasdziala-app/static/js/2.459c7868.chunk.js.map",
     "index.html": "/jfddr2-unasdziala-app/index.html",
-    "static/css/main.a47c8893.chunk.css.map": "/jfddr2-unasdziala-app/static/css/main.a47c8893.chunk.css.map",
-    "static/js/2.c2900fc8.chunk.js.LICENSE.txt": "/jfddr2-unasdziala-app/static/js/2.c2900fc8.chunk.js.LICENSE.txt"
+    "static/css/main.c63b6fa2.chunk.css.map": "/jfddr2-unasdziala-app/static/css/main.c63b6fa2.chunk.css.map",
+    "static/js/2.459c7868.chunk.js.LICENSE.txt": "/jfddr2-unasdziala-app/static/js/2.459c7868.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5d5734f4.js",
-    "static/js/2.c2900fc8.chunk.js",
-    "static/css/main.a47c8893.chunk.css",
-    "static/js/main.281a956a.chunk.js"
+    "static/js/2.459c7868.chunk.js",
+    "static/css/main.c63b6fa2.chunk.css",
+    "static/js/main.258597a7.chunk.js"
   ]
 }
